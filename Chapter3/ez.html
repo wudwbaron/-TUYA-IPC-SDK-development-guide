@@ -194,6 +194,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4.5" data-path="zbar.html">
+            
+                <a href="zbar.html">
+            
+                    
+                    zbar库的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -363,7 +376,19 @@
                                 
                                 <h1 id="ez&#x914D;&#x7F51;&#x5F00;&#x53D1;">EZ&#x914D;&#x7F51;&#x5F00;&#x53D1;</h1>
 <p>Smart&#x914D;&#x7F51;&#x9700;&#x8981;&#x7F51;&#x5361;&#x652F;&#x6301;&#x8FDB;&#x5165;sniffer&#x6A21;&#x5F0F;&#xFF0C;&#x6355;&#x83B7;&#x7A7A;&#x6C14;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x65E0;&#x7EBF;&#x5305;&#x4EE5;&#x83B7;&#x53D6;&#x624B;&#x673A;APP&#x5E7F;&#x64AD;&#x7684;ssid,passwd,token&#x914D;&#x7F51;&#x4FE1;&#x606F;<br>&#x5177;&#x4F53;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;  </p>
-<div align="center"><img src="ez.assets/&#x56FE;&#x7247;1-1575290765773.png" alt="img" style="zoom:150%;"></div>  
+<p><div align="center"><img src="ez.png" alt="img" style="zoom:150%;"></div><br>&#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#xFF1A;  </p>
+<ul>
+<li>&#x786E;&#x8BA4;wifi&#x6A21;&#x5757;&#x662F;&#x5426;&#x652F;&#x6301;sniffer&#x6A21;&#x5F0F;  </li>
+<li>IPC_APP_Init_SDK &#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;&#xFF1A;WIFI_INIT_AUTO &#x914D;&#x7F51;&#x6A21;&#x5F0F;,token &#x53C2;&#x6570;&#x586B; NULL&#xFF08;&#x5F88;&#x91CD;&#x8981;&#xFF09;  </li>
+<li>&#x786E;&#x8BA4;&#x4EE3;&#x7801;&#x4E2D;WLAN_DEV&#x548C;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x4F7F;&#x7528;&#x7684;wifi&#x540D;&#x79F0;&#x4E00;&#x81F4;&#xFF08;&#x9ED8;&#x8BA4;wlan0&#xFF09;&#xFF0C;SDK&#x7684;demo&#x4EE3;&#x7801;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E9B;&#x5BF9;wifi&#x7684;&#x64CD;&#x4F5C;(&#x8BBE;&#x7F6E;wifi&#x6A21;&#x5757;&#x6A21;&#x5F0F;&#x5207;&#x6362;&#x901A;&#x9053;&#x7B49;)&#xFF0C;&#x5982;&#x679C;&#x65E5;&#x5FD7;&#x4E2D;&#x6709;&#x67D0;&#x4E2A;&#x6307;&#x4EE4;&#x7684;&#x8FD0;&#x884C;&#x9519;&#x8BEF;&#x8BF7;&#x68C0;&#x67E5;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x662F;&#x5426;&#x5305;&#x542B;&#x8BE5;&#x547D;&#x4EE4;  </li>
+<li>&#x786E;&#x8BA4;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E86;func_Sniffer&#x7EBF;&#x7A0B;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x7EBF;&#x7A0B;&#x662F;&#x5904;&#x7406;&#x6355;&#x83B7;&#x7A7A;&#x6C14;&#x4E2D;&#x7684;&#x914D;&#x7F51;&#x4FE1;&#x606F;&#x7684;&#xFF0C;&#x6355;&#x83B7;&#x7684;&#x7A7A;&#x53E3;&#x5305;&#x4FE1;&#x606F;&#x9001;&#x5F80;s_pSnifferCall&#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x5904;&#x7406;(&#x8FD9;&#x90E8;&#x5206;&#x7531;SDK&#x8D1F;&#x8D23;&#x89E3;&#x6790;)  </li>
+<li>&#x5F53; SDK &#x5224;&#x65AD; WiFi &#x8F93;&#x5165;&#x7684;&#x7A7A;&#x53E3;&#x5305;&#x6570;&#x636E;&#x6B63;&#x786E;&#x4F1A;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF1A;hwl_wf_wk_mode_set&#xFF0C;&#x5C06; WiFi &#x72B6;&#x6001;&#x8BBE;&#x7F6E;&#x4E3A; station &#x6A21;&#x5F0F;</li>
+<li>&#x63A5;&#x4E0B;&#x6765;SDK&#x4F1A;&#x4E3B;&#x52A8;&#x8C03;&#x7528;hwl_wf_station_connect&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x5BA2;&#x6237;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5728;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x5B9E;&#x73B0;wifi&#x8FDE;&#x63A5;&#x8DEF;&#x7531;&#x5668;&#x7684;&#x52A8;&#x4F5C;&#xFF08;&#x5F88;&#x91CD;&#x8981;&#xFF09;  </li>
+<li>&#x8FDE;&#x63A5;&#x8DEF;&#x7531;&#x5668;&#x540E;&#xFF0C;&#x8FD4;&#x56DE;&#x8BBE;&#x5907;&#x7684;&#x771F;&#x5B9E;&#x72B6;&#x6001;&#x7ED9;SDK&#xFF0C;hwl_wf_get_ip&#xFF0C;hwl_wf_get_mac&#x4EE5;&#x53CA;hwl_wf_station_stat_get&#xFF08;&#x5F88;&#x91CD;&#x8981;&#xFF09;  </li>
+<li>&#x6CE8;&#x610F;&#xFF1A;&#x8BF7;&#x5148;&#x7406;&#x89E3;&#x4E0A;&#x56FE;&#x7684;&#x914D;&#x7F51;&#x6D41;&#x7A0B;&#x518D;&#x8FDB;&#x884C;&#x5F00;&#x53D1;</li>
+<li><a href="https://wudwbaron.github.io/FAQ/connectwifi.html" target="_blank">FAQ</a></li>
+</ul>
+
                                 
                                 </section>
                             
@@ -406,7 +431,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"EZ配网开发","level":"1.4.1","depth":2,"next":{"title":"AP配网开发","level":"1.4.2","depth":2,"path":"Chapter3/ap.md","ref":"Chapter3/ap.md","articles":[]},"previous":{"title":"SDK配网开发","level":"1.4","depth":1,"path":"Chapter3/net.md","ref":"Chapter3/net.md","articles":[{"title":"EZ配网开发","level":"1.4.1","depth":2,"path":"Chapter3/ez.md","ref":"Chapter3/ez.md","articles":[]},{"title":"AP配网开发","level":"1.4.2","depth":2,"path":"Chapter3/ap.md","ref":"Chapter3/ap.md","articles":[]},{"title":"二维码配网开发","level":"1.4.3","depth":2,"path":"Chapter3/qrcode.md","ref":"Chapter3/qrcode.md","articles":[]},{"title":"有线配网开发","level":"1.4.4","depth":2,"path":"Chapter3/wired.md","ref":"Chapter3/wired.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter3/ez.md","mtime":"2019-12-02T12:48:06.093Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-23T13:09:03.515Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"EZ配网开发","level":"1.4.1","depth":2,"next":{"title":"AP配网开发","level":"1.4.2","depth":2,"path":"Chapter3/ap.md","ref":"Chapter3/ap.md","articles":[]},"previous":{"title":"SDK配网开发","level":"1.4","depth":1,"path":"Chapter3/net.md","ref":"Chapter3/net.md","articles":[{"title":"EZ配网开发","level":"1.4.1","depth":2,"path":"Chapter3/ez.md","ref":"Chapter3/ez.md","articles":[]},{"title":"AP配网开发","level":"1.4.2","depth":2,"path":"Chapter3/ap.md","ref":"Chapter3/ap.md","articles":[]},{"title":"二维码配网开发","level":"1.4.3","depth":2,"path":"Chapter3/qrcode.md","ref":"Chapter3/qrcode.md","articles":[]},{"title":"有线配网开发","level":"1.4.4","depth":2,"path":"Chapter3/wired.md","ref":"Chapter3/wired.md","articles":[]},{"title":"zbar库的使用","level":"1.4.5","depth":2,"path":"Chapter3/zbar.md","ref":"Chapter3/zbar.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter3/ez.md","mtime":"2020-02-25T09:15:32.548Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-26T12:56:08.773Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
