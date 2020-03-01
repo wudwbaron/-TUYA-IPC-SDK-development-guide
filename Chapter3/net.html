@@ -60,7 +60,7 @@
     <link rel="next" href="ez.html" />
     
     
-    <link rel="prev" href="../Charpter2/demo.html" />
+    <link rel="prev" href="../Chapter2/pid.html" />
     
 
     </head>
@@ -102,9 +102,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../Charpter1/Introduction.html">
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/Introduction.html">
             
-                <a href="../Charpter1/Introduction.html">
+                <a href="../Chapter1/Introduction.html">
             
                     
                     SDK简介
@@ -115,9 +115,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../Charpter2/demo.html">
+        <li class="chapter " data-level="1.3" data-path="../Chapter2/demo.html">
             
-                <a href="../Charpter2/demo.html">
+                <a href="../Chapter2/demo.html">
             
                     
                     Demo运行
@@ -125,6 +125,38 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/devicedemo.html">
+            
+                <a href="../Chapter2/devicedemo.html">
+            
+                    
+                    设备上运行demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/pid.html">
+            
+                <a href="../Chapter2/pid.html#pid">
+            
+                    
+                    pid创建教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -196,10 +228,23 @@
     
         <li class="chapter " data-level="1.4.5" data-path="zbar.html">
             
-                <a href="zbar.html#Inter-Page">
+                <a href="zbar.html#zbr">
             
                     
                     zbar库的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="app_scan_qrcode.html">
+            
+                <a href="app_scan_qrcode.html">
+            
+                    
+                    app扫描设备二维码配网
             
                 </a>
             
@@ -222,6 +267,51 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/live.html">
+            
+                <a href="../Chapter4/live.html">
+            
+                    
+                    视频预览开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/recoder.html">
+            
+                <a href="../Chapter4/recoder.html">
+            
+                    
+                    本地回放功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/audio.html">
+            
+                <a href="../Chapter4/audio.html">
+            
+                    
+                    对讲功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -377,19 +467,20 @@
                                 <h1 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h1>
 <ul>
 <li>&#x6D82;&#x9E26;SDK&#x642D;&#x5EFA;&#x4E86;&#x4E00;&#x5957;&#x5B8C;&#x6574;&#x7684;&#x7528;&#x4EE5;&#x5F15;&#x5BFC;&#x8BBE;&#x5907;&#x914D;&#x7F51;&#x7684;&#x51FD;&#x6570;&#x6846;&#x67B6;&#xFF0C;&#x6B64;&#x7AE0;&#x8282;&#x4E3B;&#x8981;&#x9610;&#x8FF0;&#x914D;&#x7F51;&#x7684;&#x6D41;&#x7A0B;&#x4EE5;&#x53CA;&#x5404;&#x6846;&#x67B6;&#x51FD;&#x6570;&#x7684;&#x7528;&#x9014;&#x3002;&#x5EFA;&#x8BAE;&#x5F00;&#x53D1;&#x8005;&#x6309;&#x7167;&#x6587;&#x6863;&#x4ECB;&#x7ECD;&#xFF0C;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x6846;&#x67B6;&#x51FD;&#x6570;&#x4E0B;&#xFF0C;&#x5B9E;&#x73B0;&#x5404;&#x529F;&#x80FD;&#x70B9;&#x7684;&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#x3002;SDKdemo&#x4E2D;&#x5DF2;&#x5B9E;&#x73B0;&#x6846;&#x67B6;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x903B;&#x8F91;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x505A;&#x5BF9;&#x5E94;&#x5F00;&#x53D1;&#x3002;  </li>
-<li>&#x5F00;&#x53D1;&#x8005;&#x914D;&#x7F51;&#x65B9;&#x5F0F;&#x9009;&#x62E9;<br>&#x76EE;&#x524D;SDK&#x53EF;&#x652F;&#x6301;&#x4E8C;&#x7EF4;&#x7801;&#x914D;&#x7F51;&#xFF0C;EZ&#x914D;&#x7F51;&#xFF0C;AP&#x914D;&#x7F51;&#xFF0C;&#x6709;&#x7EBF;&#x914D;&#x7F51;&#x3002;<br>WIFI_INIT_AUTO&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;SDK&#xFF0C;&#x6B64;&#x65F6;sdk&#x540C;&#x65F6;&#x652F;&#x6301;&#x7EF4;&#x7801;&#x914D;&#x7F51;&#xFF0C;EZ&#x914D;&#x7F51;&#xFF0C;&#x6709;&#x7EBF;&#x914D;&#x7F51;&#xFF0C;&#x6B64;&#x65F6;&#xFF0C;app&#x4E0A; &#x9009;&#x62E9; &#x7EF4;&#x7801;&#x914D;&#x7F51;&#xFF0C;EZ&#x914D;&#x7F51;&#xFF0C;&#x6709;&#x7EBF;&#x914D;&#x7F51;&#x90FD;&#x80FD;&#x6B63;&#x5E38;&#x914D;&#x7F51;&#x3002;<br>WIFI_INIT_AP&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;SDK&#xFF0C;&#x6B64;&#x65F6;sdk&#x540C;&#x65F6;&#x652F;&#x6301;&#x4E8C;&#x7EF4;&#x7801;&#x914D;&#x7F51;&#xFF0C;AP&#x914D;&#x7F51;&#xFF0C;&#x6B64;&#x65F6;&#xFF0C;app&#x4E0A;&#x9009;&#x62E9;&#x4E8C;&#x7EF4;&#x7801;&#x914D;&#x7F51;&#x548C;AP&#x914D;&#x7F51;&#x90FD;&#x80FD;&#x6B63;&#x5E38;&#x914D;&#x7F51;&#x3002;<br>&#x5982;&#x4E0A;EZ&#x914D;&#x7F51;&#x548C;AP&#x914D;&#x7F51;&#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x5171;&#x5B58;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x6237;&#x624B;&#x52A8;&#x53BB;&#x5207;&#x6362;&#xFF0C;&#x4F7F;&#x4E0A;&#x5C42;&#x5E94;&#x7528;&#x4EE5;&#x4E0D;&#x540C;&#x7684;&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;SDK&#x3002;  <ul>
-<li>&#x57FA;&#x672C;&#x53C2;&#x6570;&#x586B;&#x5199;&#x5206;&#x522B;&#x4FEE;&#x6539;DB&#x6587;&#x4EF6;&#x3001;OTA&#x6587;&#x4EF6;&#x3001;&#x672C;&#x5730;&#x5F55;&#x50CF;&#x6587;&#x4EF6;&#x7684;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#xFF0C;&#x5B8F;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;<br>&#x8BF4;&#x660E;&#xFF1A;<br>DB&#x6587;&#x4EF6;&#x4E2D;&#x4FDD;&#x5B58;&#x8BBE;&#x5907;&#x7684;&#x914D;&#x7F51;&#x4FE1;&#x606F;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x81F3;&#x6389;&#x7535;&#x4E0D;&#x4E22;&#x5931;&#x7684;&#x8DEF;&#x5F84;&#x4E0B;<br>DB&#x6587;&#x4EF6;&#x4E0E;&#x672C;&#x5730;&#x5F55;&#x50CF;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x7ED3;&#x5C3E;&#x662F;&#x5426;&#x6709;&#x201C;/&#x201D;  <pre><code>#define IPC_APP_STORAGE_PATH    &quot;/tmp/&quot;   
-#define IPC_APP_UPGRADE_FILE    &quot;/tmp/upgrade.file&quot;  
-#define IPC_APP_SD_BASE_PATH    &quot;/tmp/&quot;
-</code></pre></li>
-</ul>
+<li>&#x5F00;&#x53D1;&#x8005;&#x914D;&#x7F51;&#x65B9;&#x5F0F;&#x9009;&#x62E9;<br>&#x76EE;&#x524D;SDK&#x53EF;&#x652F;&#x6301;&#x4E8C;&#x7EF4;&#x7801;&#x914D;&#x7F51;&#xFF0C;EZ&#x914D;&#x7F51;&#xFF0C;AP&#x914D;&#x7F51;&#xFF0C;&#x6709;&#x7EBF;&#x914D;&#x7F51;&#x3002;<br>WIFI_INIT_AUTO&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;SDK&#xFF0C;&#x6B64;&#x65F6;sdk&#x540C;&#x65F6;&#x652F;&#x6301;&#x7EF4;&#x7801;&#x914D;&#x7F51;&#xFF0C;EZ&#x914D;&#x7F51;&#xFF0C;&#x6709;&#x7EBF;&#x914D;&#x7F51;&#xFF0C;&#x6B64;&#x65F6;&#xFF0C;app&#x4E0A; &#x9009;&#x62E9; &#x7EF4;&#x7801;&#x914D;&#x7F51;&#xFF0C;EZ&#x914D;&#x7F51;&#xFF0C;&#x6709;&#x7EBF;&#x914D;&#x7F51;&#x90FD;&#x80FD;&#x6B63;&#x5E38;&#x914D;&#x7F51;&#x3002;<br>WIFI_INIT_AP&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;SDK&#xFF0C;&#x6B64;&#x65F6;sdk&#x540C;&#x65F6;&#x652F;&#x6301;&#x4E8C;&#x7EF4;&#x7801;&#x914D;&#x7F51;&#xFF0C;AP&#x914D;&#x7F51;&#xFF0C;&#x6B64;&#x65F6;&#xFF0C;app&#x4E0A;&#x9009;&#x62E9;&#x4E8C;&#x7EF4;&#x7801;&#x914D;&#x7F51;&#x548C;AP&#x914D;&#x7F51;&#x90FD;&#x80FD;&#x6B63;&#x5E38;&#x914D;&#x7F51;&#x3002;<br>&#x5982;&#x4E0A;EZ&#x914D;&#x7F51;&#x548C;AP&#x914D;&#x7F51;&#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x5171;&#x5B58;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x6237;&#x624B;&#x52A8;&#x53BB;&#x5207;&#x6362;&#xFF0C;&#x4F7F;&#x4E0A;&#x5C42;&#x5E94;&#x7528;&#x4EE5;&#x4E0D;&#x540C;&#x7684;&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;SDK&#x3002;  </li>
+<li>&#x57FA;&#x672C;&#x53C2;&#x6570;&#x586B;&#x5199;&#x5206;&#x522B;&#x4FEE;&#x6539;DB&#x6587;&#x4EF6;&#x3001;OTA&#x6587;&#x4EF6;&#x3001;&#x672C;&#x5730;&#x5F55;&#x50CF;&#x6587;&#x4EF6;&#x7684;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#xFF0C;&#x5B8F;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;<br>&#x8BF4;&#x660E;&#xFF1A;<br>DB&#x6587;&#x4EF6;&#x4E2D;&#x4FDD;&#x5B58;&#x8BBE;&#x5907;&#x7684;&#x914D;&#x7F51;&#x4FE1;&#x606F;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x81F3;&#x6389;&#x7535;&#x4E0D;&#x4E22;&#x5931;&#x7684;&#x8DEF;&#x5F84;&#x4E0B;<br>DB&#x6587;&#x4EF6;&#x4E0E;&#x672C;&#x5730;&#x5F55;&#x50CF;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x7ED3;&#x5C3E;&#x662F;&#x5426;&#x6709;&#x201C;/&#x201D;  <pre><code class="lang-C">  <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IPC_APP_STORAGE_PATH    <span class="hljs-string">&quot;/tmp/&quot;</span>   </span>
+  <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IPC_APP_UPGRADE_FILE    <span class="hljs-string">&quot;/tmp/upgrade.file&quot;</span>  </span>
+  <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IPC_APP_SD_BASE_PATH    <span class="hljs-string">&quot;/tmp/&quot;</span></span>
+</code></pre>
 </li>
-<li>&#x4FEE;&#x6539;PID&#x3001;UUID&#x3001;AUTHKEY&#x7684;&#x5B8F;&#x5B9A;&#x4E49;&#xFF1A;<br>&#x8BF4;&#x660E;&#xFF1A;PID&#x9700;&#x8981;&#x8054;&#x7CFB;&#x9879;&#x76EE;&#x7ECF;&#x7406;&#x83B7;&#x53D6;<br>UUID&#x3001;AUTHKEY&#x9700;&#x8981;&#x8054;&#x7CFB;&#x5546;&#x52A1;&#x83B7;&#x53D6;  <pre><code>   #define IPC_APP_PID             &quot;gpkguYNp7yI4k413&quot;    
-   #define IPC_APP_UUID            &quot;tuyaOneUuidForOneDevice&quot;   
-   #define IPC_APP_AUTHKEY         &quot;tuyaOneAuthkeyForOneUUID&quot;
-</code></pre></li>
-<li>&#x4FEE;&#x6539;&#x7248;&#x672C;&#x53F7;&#x7684;&#x5B8F;&#x5B9A;&#x4E49;&#xFF1A;<br>&#x8BF4;&#x660E;&#xFF1A;&#x7248;&#x672C;&#x53F7;&#x5FC5;&#x73B0;&#x6309;&#x7167;&#x683C;&#x5F0F;&#xFF1A;xx.xx.xx&#x8FDB;&#x884C;&#x586B;&#x5199;  <pre><code>  #define IPC_APP_VERSION         &quot;1.2.3&quot;
-</code></pre>&#x81F3;&#x6B64;&#xFF0C;SDK&#x57FA;&#x672C;&#x53C2;&#x6570;&#x5DF2;&#x5B8C;&#x6210;&#x586B;&#x5199;&#xFF0C;&#x8FDB;&#x5165;&#x914D;&#x7F51;&#x6A21;&#x5F0F;&#x3002;<br>&#x6B63;&#x5F0F;&#x4F7F;&#x7528;SDK&#x7684;&#x65F6;&#x5019;&#x5C06;main&#x51FD;&#x6570;&#x4E2D;IPC_APP_Init_SDK&#x4E4B;&#x524D;&#x7684;&#x4EE3;&#x7801;&#x6CE8;&#x91CA;&#x6389;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4ECE;&#x5E94;&#x7528;&#x5916;&#x9762;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#xFF0C;IPC_APP_Init_SDK&#x7684;&#x53C2;&#x6570;mode&#x8868;&#x793A;&#x914D;&#x7F51;&#x6A21;&#x5F0F;&#xFF0C;&#x672C;&#x7BC7;&#x4E0A;&#x9762;&#x7684;&#x6982;&#x8FF0;&#x4E2D;&#x6709;&#x8BF4;&#x660E;&#xFF0C;token&#x586B;NULL&#x5373;&#x53EF;&#xFF0C;token&#x4F1A;&#x5728;&#x914D;&#x7F51;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4ECE;app&#x4E2D;&#x62FF;&#x5230;&#x3002;</li>
+<li>&#x4FEE;&#x6539;PID&#x3001;UUID&#x3001;AUTHKEY&#x7684;&#x5B8F;&#x5B9A;&#x4E49;&#xFF1A;<br>&#x8BF4;&#x660E;&#xFF1A;PID&#x9700;&#x8981;&#x8054;&#x7CFB;&#x9879;&#x76EE;&#x7ECF;&#x7406;&#x83B7;&#x53D6;<br>UUID&#x3001;AUTHKEY&#x9700;&#x8981;&#x8054;&#x7CFB;&#x5546;&#x52A1;&#x83B7;&#x53D6;  <pre><code class="lang-C">   <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IPC_APP_PID             <span class="hljs-string">&quot;gpkguYNp7yI4k413&quot;</span>    </span>
+   <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IPC_APP_UUID            <span class="hljs-string">&quot;tuyaOneUuidForOneDevice&quot;</span>   </span>
+   <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IPC_APP_AUTHKEY         <span class="hljs-string">&quot;tuyaOneAuthkeyForOneUUID&quot;</span></span>
+</code></pre>
+</li>
+<li>&#x4FEE;&#x6539;&#x7248;&#x672C;&#x53F7;&#x7684;&#x5B8F;&#x5B9A;&#x4E49;&#xFF1A;<br>&#x8BF4;&#x660E;&#xFF1A;&#x7248;&#x672C;&#x53F7;&#x5FC5;&#x73B0;&#x6309;&#x7167;&#x683C;&#x5F0F;&#xFF1A;xx.xx.xx&#x8FDB;&#x884C;&#x586B;&#x5199;  <pre><code class="lang-C">  <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IPC_APP_VERSION         <span class="hljs-string">&quot;1.2.3&quot;</span></span>
+</code></pre>
+&#x81F3;&#x6B64;&#xFF0C;SDK&#x57FA;&#x672C;&#x53C2;&#x6570;&#x5DF2;&#x5B8C;&#x6210;&#x586B;&#x5199;&#xFF0C;&#x8FDB;&#x5165;&#x914D;&#x7F51;&#x6A21;&#x5F0F;&#x3002;<br>&#x6B63;&#x5F0F;&#x4F7F;&#x7528;SDK&#x7684;&#x65F6;&#x5019;&#x5C06;main&#x51FD;&#x6570;&#x4E2D;IPC_APP_Init_SDK&#x4E4B;&#x524D;&#x7684;&#x4EE3;&#x7801;&#x6CE8;&#x91CA;&#x6389;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4ECE;&#x5E94;&#x7528;&#x5916;&#x9762;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#xFF0C;IPC_APP_Init_SDK&#x7684;&#x53C2;&#x6570;mode&#x8868;&#x793A;&#x914D;&#x7F51;&#x6A21;&#x5F0F;&#xFF0C;&#x672C;&#x7BC7;&#x4E0A;&#x9762;&#x7684;&#x6982;&#x8FF0;&#x4E2D;&#x6709;&#x8BF4;&#x660E;&#xFF0C;token&#x586B;NULL&#x5373;&#x53EF;&#xFF0C;token&#x4F1A;&#x5728;&#x914D;&#x7F51;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4ECE;app&#x4E2D;&#x62FF;&#x5230;&#x3002;</li>
 </ul>
 
                                 
@@ -418,7 +509,7 @@
 
             
                 
-                <a href="../Charpter2/demo.html" class="navigation navigation-prev " aria-label="Previous page: Demo运行">
+                <a href="../Chapter2/pid.html#pid" class="navigation navigation-prev " aria-label="Previous page: pid创建教程">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -434,7 +525,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SDK配网开发","level":"1.4","depth":1,"next":{"title":"EZ配网开发","level":"1.4.1","depth":2,"path":"Chapter3/ez.md","ref":"Chapter3/ez.md","articles":[]},"previous":{"title":"Demo运行","level":"1.3","depth":1,"path":"Charpter2/demo.md","ref":"Charpter2/demo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter3/net.md","mtime":"2020-02-25T13:55:23.506Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-26T13:50:16.621Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SDK配网开发","level":"1.4","depth":1,"next":{"title":"EZ配网开发","level":"1.4.1","depth":2,"path":"Chapter3/ez.md","ref":"Chapter3/ez.md","articles":[]},"previous":{"title":"pid创建教程","level":"1.3.2","depth":2,"anchor":"#pid","path":"Chapter2/pid.md","ref":"Chapter2/pid.md#pid","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter3/net.md","mtime":"2020-02-29T08:21:02.729Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T07:22:15.207Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -442,10 +533,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

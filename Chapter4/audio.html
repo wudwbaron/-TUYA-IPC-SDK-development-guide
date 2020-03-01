@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>FAQ · GitBook</title>
+        <title>对讲功能开发 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Chapter12/function.html" />
+    <link rel="next" href="../Chapter5/dp.html" />
     
     
-    <link rel="prev" href="../Chapter10/ptz.html" />
+    <link rel="prev" href="recoder.html" />
     
 
     </head>
@@ -257,9 +257,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../Chapter4/av.html">
+        <li class="chapter " data-level="1.5" data-path="av.html">
             
-                <a href="../Chapter4/av.html">
+                <a href="av.html">
             
                     
                     音视频开发
@@ -271,9 +271,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/live.html">
+        <li class="chapter " data-level="1.5.1" data-path="live.html">
             
-                <a href="../Chapter4/live.html">
+                <a href="live.html">
             
                     
                     视频预览开发
@@ -284,9 +284,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/recoder.html">
+        <li class="chapter " data-level="1.5.2" data-path="recoder.html">
             
-                <a href="../Chapter4/recoder.html">
+                <a href="recoder.html">
             
                     
                     本地回放功能开发
@@ -297,9 +297,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/audio.html">
+        <li class="chapter active" data-level="1.5.3" data-path="audio.html">
             
-                <a href="../Chapter4/audio.html">
+                <a href="audio.html">
             
                     
                     对讲功能开发
@@ -393,9 +393,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12" data-path="faq.html">
+        <li class="chapter " data-level="1.12" data-path="../Chapter11/faq.html">
             
-                <a href="faq.html">
+                <a href="../Chapter11/faq.html">
             
                     
                     FAQ
@@ -449,7 +449,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >FAQ</a>
+        <a href=".." >对讲功能开发</a>
     </h1>
 </div>
 
@@ -464,7 +464,85 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="faq">FAQ</h1>
+                                <h1 id="&#x5BF9;&#x8BB2;&#x529F;&#x80FD;&#x5F00;&#x53D1;">&#x5BF9;&#x8BB2;&#x529F;&#x80FD;&#x5F00;&#x53D1;</h1>
+<ul>
+<li>&#x4E00;&#x3001;APP&#x76D1;&#x542C;&#x8BBE;&#x5907;&#x7AEF;&#x97F3;&#x9891;  </li>
+<li>&#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#xFF1A;</li>
+<li>&#x5728;IPC_APP_Init_SDK&#x4E2D;IPC_APP_Set_Media_Info&#x8BBE;&#x7F6E;&#x97F3;&#x9891;&#x53C2;&#x6570;</li>
+</ul>
+<pre><code class="lang-C">        <span class="hljs-comment">/* Audio stream configuration. 
+        Note: The internal P2P preview, cloud storage, and local storage of the SDK are all use E_CHANNEL_AUDIO data. */</span>
+        s_media_info.channel_enable[E_CHANNEL_AUDIO] = TRUE;         <span class="hljs-comment">/* Whether to enable local sound collection */</span>
+        s_media_info.audio_codec[E_CHANNEL_AUDIO] = TUYA_CODEC_AUDIO_PCM;<span class="hljs-comment">/* Encoding format */</span>
+        s_media_info.audio_sample [E_CHANNEL_AUDIO]= TUYA_AUDIO_SAMPLE_8K;<span class="hljs-comment">/* Sampling Rate */</span>
+        s_media_info.audio_databits [E_CHANNEL_AUDIO]= TUYA_AUDIO_DATABITS_16;<span class="hljs-comment">/* Bit width */</span>
+        s_media_info.audio_channel[E_CHANNEL_AUDIO]= TUYA_AUDIO_CHANNEL_MONO;<span class="hljs-comment">/* channel */</span>
+        s_media_info.audio_fps[E_CHANNEL_AUDIO] = <span class="hljs-number">25</span>;<span class="hljs-comment">/* Fragments per second */</span>
+</code></pre>
+<p>  channel_enable&#xFF1A;&#x4F7F;&#x80FD;&#x97F3;&#x9891;&#x901A;&#x9053;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;TRUE&#x4E3A;&#x5F00;&#x542F;&#x72B6;&#x6001;&#xFF0C;&#x5F53;&#x4EA7;&#x54C1;&#x5B9A;&#x4E49;&#x4E0D;&#x9700;&#x8981;&#x9EA6;&#x514B;&#x98CE;&#x8F93;&#x5165;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x9009;&#x62E9;FALSE&#x5173;&#x95ED;<br>  audio_codec&#xFF1A;&#x97F3;&#x9891;&#x7684;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF0C;&#x76EE;&#x524D;&#x652F;&#x6301;PCM&#xFF0C;G711U&#xFF0C;G711A&#xFF0C;AAC&#xFF08;AAC_ADTS&#x4E3B;&#x8981;&#x7528;&#x4E8E;chromecast&#x529F;&#x80FD;&#x7684;&#x97F3;&#x9891;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x8BE6;&#x7EC6;&#x8BBA;&#x8FF0;&#xFF09;<br>  audio_sample&#xFF1A;&#x91C7;&#x6837;&#x9891;&#x7387;&#x9ED8;&#x8BA4;8K<br>  audio_databits&#xFF1A;&#x91C7;&#x6837;&#x4F4D;&#x6570;&#x9ED8;&#x8BA4;16&#x4F4D;<br>  &#x5728;&#x5F00;&#x53D1;&#x8BED;&#x97F3;&#x76D1;&#x542C;&#x529F;&#x80FD;&#x65F6;&#x9700;&#x8981;&#x4ED4;&#x7EC6;&#x6838;&#x5BF9;&#x4EE5;&#x4E0A;&#x7F16;&#x7801;&#x4FE1;&#x606F;&#x662F;&#x5426;&#x548C;&#x8BBE;&#x5907;&#x7F16;&#x7801;&#x5668;&#x7F16;&#x7801;&#x51FA;&#x6765;&#x7684;&#x97F3;&#x9891;&#x7684;&#x7F16;&#x7801;&#x4FE1;&#x606F;&#x4E00;&#x81F4;  </p>
+<ul>
+<li>&#x8C03;&#x7528;TUYA_APP_Init_Ring_Buffer&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;&#x97F3;&#x9891;&#x901A;&#x9053;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#x4E3B;&#x8981;&#x8C03;&#x7528;tuya_ipc_ring_buffer_init&#x51FD;&#x6570;&#x6765;&#x521D;&#x59CB;&#x5316;&#x89C6;&#x9891;&#x901A;&#x9053;</li>
+</ul>
+<pre><code class="lang-C">    <span class="hljs-comment">/* initialize one ring buffer for one stream(one channel)
+    channel: ring buffer channel num, multipul channel for one 
+    bitrate: bitrate in Kbps
+    fps: framerate pre second
+    max_buffer_seconds: should be more than 1 GOP and less than 10 sencond. Set to 0 as default(10s).
+    requestIframeCB: call back function to request one I frame from video decoder. set to NULL if not needed or for NON-video stream.
+    */</span>
+    <span class="hljs-function">OPERATE_RET <span class="hljs-title">tuya_ipc_ring_buffer_init</span><span class="hljs-params">(CHANNEL_E channel, UINT_T bitrate, UINT_T fps, UINT_T max_buffer_seconds, FUNC_REQUEST_I_FRAME requestIframeCB)</span></span>;
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;:<br>  max_buffer_seconds&#xFF1A;&#x97F3;&#x9891;&#x5F00;&#x53D1;&#x9ED8;&#x8BA4;0&#x5C31;&#x53EF;&#x4EE5; 
+  requestIframeCB&#xFF1A;&#x97F3;&#x9891;&#x5F00;&#x53D1;&#x9ED8;&#x8BA4;NULL&#x5C31;&#x53EF;&#x4EE5;  </p>
+<ul>
+<li>&#x8C03;&#x7528;TUYA_APP_Put_Frame&#x5F80;&#x89C6;&#x9891;&#x901A;&#x9053;&#x585E;&#x97F3;&#x9891;&#x6570;&#x636E;&#xFF0C;&#x4E3B;&#x8981;&#x8C03;&#x7528;tuya_ipc_ring_buffer_append_data&#x5F80;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E2A;&#x901A;&#x9053;&#x585E;&#x6D41;  </li>
+</ul>
+<pre><code class="lang-C">    <span class="hljs-comment">/* append new frame into a ring buffer
+    */</span>
+    <span class="hljs-function">OPERATE_RET <span class="hljs-title">tuya_ipc_ring_buffer_append_data</span><span class="hljs-params">(CHANNEL_E channel, UCHAR_T *addr, UINT_T size, MEDIA_FRAME_TYPE_E type, UINT64_T pts)</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;&#x4E3B;&#x8981;&#x5305;&#x542B;&#x901A;&#x9053;&#x53F7;&#xFF0C;&#x6570;&#x636E;&#x5E27;&#x7684;&#x5927;&#x5C0F;&#x7C7B;&#x578B;&#x7B49;  </p>
+<ul>
+<li>&#x7279;&#x522B;&#x8BF4;&#x660E;&#xFF1A;
+1&#x3001;&#x4EE5;&#x4E0A;&#x6B65;&#x9AA4;&#x5C31;&#x662F;app&#x76D1;&#x542C;&#x529F;&#x80FD;&#x5F00;&#x53D1;&#x7684;&#x6838;&#x5FC3;&#x6D41;&#x7A0B;<br>2&#x3001;&#x97F3;&#x9891;&#x4E0A;&#x4F20;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x4E3A;1400
+3&#x3001;<a href="https://wudwbaron.github.io/FAQ/preview.html" target="_blank">FAQ</a>
+4&#x3001;&#x97F3;&#x9891;&#x5361;&#x987F;&#xFF0C;&#x5F02;&#x54CD;&#x95EE;&#x9898;&#x6392;&#x67E5;&#x65B9;&#x6CD5;&#xFF1A;&#x5728;&#x97F3;&#x9891;&#x6570;&#x636E;&#x9001;&#x5165;SDK&#x4E4B;&#x524D;&#x5C06;&#x97F3;&#x9891;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5230;sd&#x5361;&#xFF0C;PC&#x7AEF;&#x4F7F;&#x7528;g711player&#x53BB;&#x64AD;&#x653E;&#xFF0C;&#x770B;&#x662F;&#x5426;&#x5F02;&#x5E38;  <div align="center"><img src="g711player.jpg" alt="img" style="zoom:150%;"></div></li>
+<li>&#x4E8C;&#x3001;&#x8BBE;&#x5907;&#x7AEF;&#x64AD;&#x653E;App&#x53D1;&#x9001;&#x8FC7;&#x6765;&#x7684;&#x97F3;&#x9891;</li>
+<li>&#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#xFF1A; </li>
+<li>&#x5728; TUYA_APP_Enable_Speaker_CB &#x51FD;&#x6570;&#x4E2D;&#x5B9E;&#x73B0;&#x5587;&#x53ED;&#x7684;&#x5F00;&#x5173;&#x63A7;&#x5236;</li>
+</ul>
+<pre><code class="lang-C">    <span class="hljs-comment">/* Callback of talkback mode,turn on or off speaker hardware*/</span>
+    <span class="hljs-function">VOID <span class="hljs-title">TUYA_APP_Enable_Speaker_CB</span><span class="hljs-params">(BOOL_T enabled)</span>
+    </span>{
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;enable speaker %d \r\n&quot;</span>, enabled);
+        <span class="hljs-comment">//TODO</span>
+        <span class="hljs-comment">/* Developers need to turn on or off speaker hardware operations. 
+        If IPC hardware features do not need to be explicitly turned on, the function can be left blank. */</span>
+    }
+</code></pre>
+<ul>
+<li><p>&#x5728;TUYA_APP_Rev_Audio_CB&#x51FD;&#x6570;&#x4E2D;&#x5904;&#x7406;app&#x4E0B;&#x53D1;&#x8FC7;&#x6765;&#x7684;&#x97F3;&#x9891;&#x6570;&#x636E;&#xFF0C;App &#x9ED8;&#x8BA4;&#x4E0B;&#x53D1; G711U &#x683C;&#x5F0F;&#x97F3;&#x9891;&#xFF0C;&#x4E0B;&#x53D1;&#x957F;&#x5EA6;&#x4E3A;320</p>
+<pre><code class="lang-C">  <span class="hljs-function">VOID <span class="hljs-title">TUYA_APP_Rev_Audio_CB</span><span class="hljs-params">(IN CONST MEDIA_FRAME_S *p_audio_frame,
+                             TUYA_AUDIO_SAMPLE_E audio_sample,
+                             TUYA_AUDIO_DATABITS_E audio_databits,
+                             TUYA_AUDIO_CHANNEL_E audio_channel)</span>
+  </span>{
+      <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;rev audio cb len:%u sample:%d db:%d channel:%d\r\n&quot;</span>, p_audio_frame-&gt;size, audio_sample, audio_databits, audio_channel);
+      <span class="hljs-comment">//PCM-Format 8K 16Bit MONO</span>
+      <span class="hljs-comment">//TODO</span>
+      <span class="hljs-comment">/* Developers need to implement the operations of voice playback*/</span>
+
+  }
+</code></pre>
+</li>
+<li>App &#x9ED8;&#x8BA4;&#x4E0B;&#x53D1; G711U &#x683C;&#x5F0F;&#x97F3;&#x9891;&#xFF0C;&#x8BBE;&#x5907;&#x7AEF;&#x5982;&#x9700;&#x4EE5; PCM &#x683C;&#x5F0F;&#x64AD;&#x653E;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF1A;
+tuya_g711_decode &#x5BF9;&#x4E0B;&#x53D1;&#x7684;&#x97F3;&#x9891;&#x505A;&#x8F6C;&#x7801;&#x5904;&#x7406;
+```C
+  int tuya_g711_encode(unsigned char type, unsigned short <em>src, unsigned int srcLen, unsigned char </em>drc, unsigned int <em>pOut);
+  int tuya_g711_decode(unsigned char type, unsigned short </em>src, unsigned int srcLen, unsigned char <em>drc, unsigned int </em>pOut);
+  int tuya_g711_encode_16K(unsigned char type, unsigned short <em>src, unsigned int srcLen, unsigned char </em>drc, unsigned int *pOut);</li>
+</ul>
+<p>```</p>
 
                                 
                                 </section>
@@ -492,12 +570,12 @@
 
             
                 
-                <a href="../Chapter10/ptz.html" class="navigation navigation-prev " aria-label="Previous page: 摇头机运动功能开发">
+                <a href="recoder.html" class="navigation navigation-prev " aria-label="Previous page: 本地回放功能开发">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Chapter12/function.html" class="navigation navigation-next " aria-label="Next page: 接口说明">
+                <a href="../Chapter5/dp.html" class="navigation navigation-next " aria-label="Next page: 功能点开发">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -508,7 +586,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"FAQ","level":"1.12","depth":1,"next":{"title":"接口说明","level":"1.13","depth":1,"path":"Chapter12/function.md","ref":"Chapter12/function.md","articles":[]},"previous":{"title":"摇头机运动功能开发","level":"1.11","depth":1,"path":"Chapter10/ptz.md","ref":"Chapter10/ptz.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter11/faq.md","mtime":"2019-11-20T12:19:20.389Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T07:22:15.207Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"对讲功能开发","level":"1.5.3","depth":2,"next":{"title":"功能点开发","level":"1.6","depth":1,"path":"Chapter5/dp.md","ref":"Chapter5/dp.md","articles":[]},"previous":{"title":"本地回放功能开发","level":"1.5.2","depth":2,"path":"Chapter4/recoder.md","ref":"Chapter4/recoder.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter4/audio.md","mtime":"2020-02-29T08:13:21.643Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T07:22:15.207Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

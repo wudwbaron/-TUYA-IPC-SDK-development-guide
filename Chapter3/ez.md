@@ -11,6 +11,17 @@ Smart配网需要网卡支持进入sniffer模式，捕获空气中的所有无�
 * 确认是否开启了func_Sniffer线程，因为这个线程是处理捕获空气中的配网信息的，捕获的空口包信息送往s_pSnifferCall这个回调处理(这部分由SDK负责解析)  
 * 当 SDK 判断 WiFi 输入的空口包数据正确会调用函数：hwl_wf_wk_mode_set，将 WiFi 状态设置为 station 模式
 * 接下来SDK会主动调用hwl_wf_station_connect这个接口，客户需要自己在这个接口实现wifi连接路由器的动作（很重要）  
-* 连接路由器后，返回设备的真实状态给SDK，hwl_wf_get_ip，hwl_wf_get_mac以及hwl_wf_station_stat_get（很重要）  
+* 返回设备的真实状态给SDK，hwl_wf_get_ip，hwl_wf_get_mac以及hwl_wf_station_stat_get（很重要),设备所有状态为如下结构体  
+```C
+    typedef enum {
+        WSS_IDLE = 0,                       // not connected
+        WSS_CONNECTING,                     // connecting wifi
+        WSS_PASSWD_WRONG,                   // passwd not match
+        WSS_NO_AP_FOUND,                    // ap is not found
+        WSS_CONN_FAIL,                      // connect fail
+        WSS_CONN_SUCCESS,                   // connect wifi success
+        WSS_GOT_IP,                         // get ip success
+    }WF_STATION_STAT_E;
+```
 * 注意：请先理解上图的配网流程再进行开发
 * [FAQ](https://wudwbaron.github.io/FAQ/connectwifi.html)

@@ -6,7 +6,7 @@ zbar 是条形码/二维码扫描工具，支持摄像头及图片扫描，支�
 下载链接：https://ayera.dl.sourceforge.net/project/zbar/zbar/0.10/zbar-0.10.tar.bz2  
 参考代码：  
 
-  ```
+  ```C
    int qrcode_parse_from_buffer(void *y8data, int w, int h, char* pqrcode)
     {
     int ret = -1;
@@ -50,7 +50,7 @@ zbar 是条形码/二维码扫描工具，支持摄像头及图片扫描，支�
 * 编译脚本  
 
 * 构建一个 build.sh 编译脚本，内如如下：
-```  
+```C  
     #!/bin/bash
     CURDIR=`pwd`
     FILENAME=zbar-0.10.tar.gz
