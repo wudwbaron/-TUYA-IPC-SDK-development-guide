@@ -29,15 +29,15 @@ OPERATE_RET tuya_ipc_ring_buffer_init(CHANNEL_E channel, UINT_T bitrate, UINT_T 
 需要注意的是:  
   max_buffer_seconds表示最大的视频缓存时间，换算成视频缓存空间大小是bitrate\*max_buffer_seconds\*I帧的最大值（主码流300k，子码流200k），限制是这个参数的默认值为10s，最大值为10s，最小值为一个gop包含的时间(比如gop为20，fps为10,则这个最小值为gop/fps=2s)  
   requestIframeCB表示强制i帧的回调，需要用户主动实现这个回调，SDK会根据需要来调用，实现强制i帧可以优化出图时间  
-* 调用TUYA_APP_Put_Frame往视频通道塞原始的视频帧数据，编码器每编码一帧就往SDK送一帧,，主要调用tuya_ipc_ring_buffer_append_data往具体的某个通道塞流  
+* 调用TUYA_APP_Put_Frame往视频通道塞原始的视频帧数据，编码器每编码一帧就往SDK送一帧,，主要调用tuya_ipc_ring_buffer_append_data往具体的某个通道塞流    
 ```C
 /* append new frame into a ring buffer
 */
-OPERATE_RET tuya_ipc_ring_buffer_append_data(CHANNEL_E channel, UCHAR_T *addr, UINT_T size, MEDIA_FRAME_TYPE_E type, UINT64_T pts);
+OPERATE_RET tuya_ipc_ring_buffer_append_data(CHANNEL_E channel, UCHAR_T *addr, UINT_T size, MEDIA_FRAME_TYPE_E type, UINT64_T pts);  
 
 ```
-参数说明：主要包含通道号，数据帧的大小类型等  
-* 特别说明：
+参数说明：主要包含通道号，数据帧的大小类型等    
+* 特别说明：  
 1、以上步骤就是视频预览开发的核心流程  
 2、涂鸦 SDK 目前已经支持 H.264 和h265编码视频数据(h265请使用sdk版本4.7.4配合涂鸦智能app3.15.1版本进行调试)  
 3、若需要占满 App 屏幕，视频分辨率请使用 16 : 9  

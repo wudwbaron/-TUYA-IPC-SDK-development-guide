@@ -6,7 +6,9 @@
 * 一、纯有线配网的流程
   开发流程：  
 
-* 下载纯有线的SDK，因为默认对外输出的SDK为有线加无线或者纯无线的SDK（很重要）
+* 下载纯有线的SDK，因为默认对外输出的SDK为有线加无线或者纯无线的SDK（很重要）  
+
+* 设备已经配置好网络并且可以ping通涂鸦的服务器(a2.tuyacn.com)  
 
 * IPC_APP_Init_SDK 函数中，选择：WIFI_INIT_NULL 配网模式,token 参数填 NULL（很重要）   
 
@@ -18,6 +20,7 @@
 
 * 二、二维码和有线配网同时兼容
   开发流程：  
+* 设备已经配置好网络并且可以ping通涂鸦的服务器(a2.tuyacn.com)  
 
 * IPC_APP_Init_SDK 函数中，选择：WIFI_INIT_AUTO 配网模式,token 参数填 NULL（很重要）   
 

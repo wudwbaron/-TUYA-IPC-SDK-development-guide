@@ -9,7 +9,7 @@
 * 接下来SDK会调用hwl_wf_ap_start，客户在这个函数开启ap热点（很重要）
 * 确认返回给SDK的ip（hwl_wf_get_ip）是否和app在同一个局域网(重要)
 * SDK 接收到 AP 模式的配网信息，会调用hwl_wf_wk_mode_set，将 WiFi 状态设置为 station 模式
-* 接下来SDK会主动调用hwl_wf_station_connect这个接口，客户需要自己在这个接口实现wifi连接路由器的动作（很重要）  
+* 接下来SDK会主动调用hwl_wf_station_connect这个接口，客户需要自己在这个接口实现wifi连接路由器的动作，连接路由器后，确认设备配置好网络并且可以ping通涂鸦的服务器(a2.tuyacn.com)（很重要）  
 * 返回设备的真实状态给SDK，hwl_wf_get_ip，hwl_wf_get_mac以及hwl_wf_station_stat_get（很重要),设备所有状态为如下结构体  
 ```C
     typedef enum {
@@ -22,5 +22,5 @@
         WSS_GOT_IP,                         // get ip success
     }WF_STATION_STAT_E;
 ```
-* 注意：请先理解上图的配网流程再进行开发
-* [FAQ](https://wudwbaron.github.io/FAQ/connectwifi.html)
+* 注意：请先理解上图的配网流程再进行开发  
+* [FAQ](https://wudwbaron.github.io/FAQ/connectwifi.html)  
