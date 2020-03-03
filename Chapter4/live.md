@@ -1,6 +1,6 @@
 # 预览功能开发
 * 开发流程：
-* 在IPC_APP_Init_SDK中IPC_APP_Set_Media_Info设置视频参数
+* 在IPC_APP_Init_SDK中IPC_APP_Set_Media_Info设置视频参数   
 ```C
         s_media_info.channel_enable[E_CHANNEL_VIDEO_MAIN] = TRUE;    /* Whether to enable local HD video streaming */
         s_media_info.video_fps[E_CHANNEL_VIDEO_MAIN] = 30;  /* FPS */
@@ -13,9 +13,9 @@
     }
 
 ```
-  如上代码其中video_fps表示输入SDK中视频流的帧率，video_gop表示一组图像的帧数，video_bitrate表示视频流码率，video_width表示每帧图像的宽， video_height表示每帧图像的高，video_codec表示编码格式，channel_enable表示是否使能该通道，那么I帧间隔是gop/fps，例如fps为15，gop为30，则i帧间隔是2s即2s一个i帧，在开发视频预览功能时需要仔细核对以上编码信息是否和设备编码器编码出来的视频的编码信息一致(如果不确认参数是否一致，可以在把视频流送入sdk前保存视频裸数据到sd卡，在pc端用stream eye分析，同时该方法也能够用来分析画面出现马赛克、卡顿等问题，如下图)
-<div align=center><img  src = "stream_eye.jpg"alt="img" style="zoom:150%;"></div>
-* 调用TUYA_APP_Init_Ring_Buffer参数初始化视频通道，在这个函数中主要调用tuya_ipc_ring_buffer_init函数来初始化视频通道
+  如上代码其中video_fps表示输入SDK中视频流的帧率，video_gop表示一组图像的帧数，video_bitrate表示视频流码率，video_width表示每帧图像的宽， video_height表示每帧图像的高，video_codec表示编码格式，channel_enable表示是否使能该通道，那么I帧间隔是gop/fps，例如fps为15，gop为30，则i帧间隔是2s即2s一个i帧，在开发视频预览功能时需要仔细核对以上编码信息是否和设备编码器编码出来的视频的编码信息一致(如果不确认参数是否一致，可以在把视频流送入sdk前保存视频裸数据到sd卡，在pc端用stream eye分析，同时该方法也能够用来分析画面出现马赛克、卡顿等问题，如下图)  
+<div align=center><img  src = "stream_eye.jpg"alt="img" style="zoom:150%;"></div>  
+*  调用TUYA_APP_Init_Ring_Buffer参数初始化视频通道，在这个函数中主要调用tuya_ipc_ring_buffer_init函数来初始化视频通道  
 ```C
 /* initialize one ring buffer for one stream(one channel)
 channel: ring buffer channel num, multipul channel for one 
@@ -42,6 +42,6 @@ OPERATE_RET tuya_ipc_ring_buffer_append_data(CHANNEL_E channel, UCHAR_T *addr, U
 2、涂鸦 SDK 目前已经支持 H.264 和h265编码视频数据(h265请使用sdk版本4.7.4配合涂鸦智能app3.15.1版本进行调试)  
 3、若需要占满 App 屏幕，视频分辨率请使用 16 : 9  
 4、GOP建议为fps的2~3倍  
-5、[FAQ](https://wudwbaron.github.io/FAQ/preview.html)
-6、如果在开发过程中出现以下问题则问题为主码流i帧的大小超过了SDK限制的200k应该优化编码参数，如图片亮度、锐度等参数  
+5、[FAQ](https://wudwbaron.github.io/FAQ/preview.html)  
+6、如果在开发过程中出现以下问题则问题为码流i帧的大小超过了SDK限制应该优化编码参数，如图片亮度、锐度等参数  
 <div align=center><img  src = "dataoversize.png"alt="img" style="zoom:150%;"></div>  

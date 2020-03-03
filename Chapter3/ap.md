@@ -1,8 +1,6 @@
 # AP配网开发
 
-Smart配网需要网卡支持进入sniffer模式，捕获空气中的所有无线包以获取手机APP广播的ssid,passwd,token配网信息    
 具体流程如下：  
-
 <div align=center><img  src = "ap.png"alt="img" style="zoom:150%;"></div>  
 开发流程：  
 * IPC_APP_Init_SDK 函数中，选择：WIFI_INIT_AP 配网模式,token 参数填 NULL（很重要）  
