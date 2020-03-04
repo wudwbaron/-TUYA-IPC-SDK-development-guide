@@ -10,7 +10,7 @@
 
 * 确认在hwl_wf_sniffer_set中是否开启了thread_qrcode线程，SDK中demo代码默认是没有开启这个线程(很重要)  
 
-* 在__tuya_linux_get_snap_qrcode中实现识别app上二维码的动作（<div id = "zbar" > zbar库的使用  </div>），并返回识别的信息给tuya_ipc_direct_connect这个函数（很重要）  
+* 在__tuya_linux_get_snap_qrcode中实现识别app上二维码的动作<div id="zbar"> (zbar库的使用) , </div>并返回识别的信息给tuya_ipc_direct_connect这个函数（很重要）  
 
 * 如果SDK解析到了正确的配网信息接下来SDK会调用函数：hwl_wf_wk_mode_set，将 WiFi 状态设置为 station 模式
 
