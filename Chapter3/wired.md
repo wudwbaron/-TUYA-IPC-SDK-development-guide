@@ -12,7 +12,7 @@
 
 * IPC_APP_Init_SDK 函数中，选择：WIFI_INIT_NULL 配网模式,token 参数填 NULL（很重要）   
 
-* 确认在hwl_bnw_get_ip返回设备的 IP 地址以及hwl_bnw_get_mac返回mac地址，再确认获取的ip和app所在同一个局域网(很重要)  
+* 确认在hwl_bnw_get_ip((NET_DEV网卡名称要和设备的真实网卡名称保持一致))返回设备的 IP 地址以及hwl_bnw_get_mac返回mac地址，再确认获取的ip和app所在同一个局域网(很重要)  
 
 * SDK 将获取到的设备 IP 地址与 Mac 地址通过路由器发送广播包，手机连上路由器 WiFi 并
 接收到广播信息后，向服务器获取 token，获取成功后给到设备端进行联网，至此，配网操
@@ -24,7 +24,7 @@
 
 * IPC_APP_Init_SDK 函数中，选择：WIFI_INIT_AUTO 配网模式,token 参数填 NULL（很重要）   
 
-* 确认在hwl_wf_get_ip返回设备的 IP 地址以及hwl_wf_get_mac返回mac地址，再确认获取的ip和app所在同一个局域网(很重要)  
+* 确认在hwl_wf_get_ip返回设备的 IP 地址(NET_DEV网卡名称要和设备的真实网卡名称保持一致)以及hwl_wf_get_mac返回mac地址，再确认获取的ip和app所在同一个局域网(很重要)  
 
 * SDK 将获取到的设备 IP 地址与 Mac 地址通过路由器发送广播包，手机连上路由器 WiFi 并
   接收到广播信息后，向服务器获取 token，获取成功后给到设备端进行联网，至此，配网操

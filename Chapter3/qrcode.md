@@ -10,9 +10,9 @@
 
 * 确认在hwl_wf_sniffer_set中是否开启了thread_qrcode线程，SDK中demo代码默认是没有开启这个线程(很重要)  
 
-* 在__tuya_linux_get_snap_qrcode中实现识别app上二维码的动作<div id="zbar"> (zbar库的使用) , </div>并返回识别的信息给tuya_ipc_direct_connect这个函数（很重要）  
-
-* 如果SDK解析到了正确的配网信息接下来SDK会调用函数：hwl_wf_wk_mode_set，将 WiFi 状态设置为 station 模式
+* 在__tuya_linux_get_snap_qrcode中实现识别app上二维码的动作,并返回识别的信息给tuya_ipc_direct_connect这个函数（很重要）   
+* <div id="zbar"> zbar库的使用</div>  
+* 如果SDK解析到了正确的配网信息接下来SDK会调用函数：hwl_wf_wk_mode_set，将 WiFi 状态设置为 station 模式  
 
 * 接下来SDK会主动调用hwl_wf_station_connect这个接口，客户需要自己在这个接口实现wifi连接路由器的动作（很重要）  
 
@@ -28,6 +28,6 @@
         WSS_GOT_IP,                         // get ip success
     }WF_STATION_STAT_E;
 ```
-* 注意：请先理解上图的配网流程再进行开发
-
-* [FAQ](https://wudwbaron.github.io/FAQ/connectwifi.html)
+* 当用户输入了错误的wifi密码的情况下：应该将设备的状态置为WSS_PASSWD_WRONG，并且通过语音或者提示灯提示用户重置设备后重新配网。  
+* 注意：请先理解上图的配网流程再进行开发  
+* [FAQ](https://wudwbaron.github.io/FAQ/connectwifi.html)  

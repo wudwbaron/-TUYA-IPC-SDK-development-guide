@@ -42,6 +42,16 @@
     time_utc += 3600;
     }
 ```
+* 在初始化本地存储之前要先确认sd卡的状态：SDK会调用tuya_ipc_sd_get_status 来获取SD卡的状态，需要确认返回的状态为SD_STATUS_NORMAL，本地存储才会初始化成功，如以下日志report sd status 0 -> 2:表示sd卡状态异常导致本地存储初始化异常   
+```C
+[03-11 10:58:25-- TUYA Debug][tuya_ipc_stream_storage.c:1242] report sd status 0 -> 2
+
+[03-11 10:58:25-- TUYA Debug][tuya_iot_com_api.c:633] dp compo:{"110":2}
+[03-11 10:58:25-- TUYA Debug][smart_frame.c:1536] dp<110> check. need_update:1 pv_stat:0 trig_t:0 filter_type:0 force_send:1
+[03-11 10:58:25-- TUYA Debug][smart_frame.c:808] first serial number: 60686
+[03-11 10:58:25-- TUYA Debug][mqc_app.c:951] Send MQTT Msg.P:4 N:60686 Q:1
+[03-11 10:58:25-- TUYA Err][tuya_ipc_stream_storage.c:1518] storage not inited
+```
 *   调用 TUYA_APP_Init_Stream_Storage 函数进行本地存储初始化，默认开启连续存储，如需开
 启事件存储，注释 tuya_ipc_ss_set_write_mode(SS_WRITE_MODE_ALL)，开启 tuya_ipc_ss_ set_
 write_mode(SS_WRITE_MODE_EVENT)，如下图所示：  

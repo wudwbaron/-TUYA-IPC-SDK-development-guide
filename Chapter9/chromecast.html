@@ -1,0 +1,856 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Chromecast功能开发 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="echochromecastguide.html" />
+    
+    
+    <link rel="prev" href="echo.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/Introduction.html">
+            
+                <a href="../Chapter1/Introduction.html">
+            
+                    
+                    SDK简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Chapter2/demo.html">
+            
+                <a href="../Chapter2/demo.html">
+            
+                    
+                    Demo运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/devicedemo.html">
+            
+                <a href="../Chapter2/devicedemo.html">
+            
+                    
+                    设备上运行demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/pid.html">
+            
+                <a href="../Chapter2/pid.html#pid">
+            
+                    
+                    pid创建教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Chapter3/net.html">
+            
+                <a href="../Chapter3/net.html">
+            
+                    
+                    SDK配网开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/appadddevice.html">
+            
+                <a href="../Chapter3/appadddevice.html">
+            
+                    
+                    app配网操作指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/ez.html">
+            
+                <a href="../Chapter3/ez.html">
+            
+                    
+                    EZ配网开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Chapter3/ap.html">
+            
+                <a href="../Chapter3/ap.html">
+            
+                    
+                    AP配网开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Chapter3/qrcode.html">
+            
+                <a href="../Chapter3/qrcode.html">
+            
+                    
+                    二维码配网开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Chapter3/wired.html">
+            
+                <a href="../Chapter3/wired.html">
+            
+                    
+                    有线配网开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Chapter3/zbar.html">
+            
+                <a href="../Chapter3/zbar.html#zbar">
+            
+                    
+                    zbar库的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Chapter3/app_scan_qrcode.html">
+            
+                <a href="../Chapter3/app_scan_qrcode.html">
+            
+                    
+                    app扫描设备二维码配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Chapter4/av.html">
+            
+                <a href="../Chapter4/av.html">
+            
+                    
+                    音视频开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/live.html">
+            
+                <a href="../Chapter4/live.html">
+            
+                    
+                    视频预览开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/recoder.html">
+            
+                <a href="../Chapter4/recoder.html">
+            
+                    
+                    本地回放功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/audio.html">
+            
+                <a href="../Chapter4/audio.html">
+            
+                    
+                    对讲功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter5/dp.html">
+            
+                <a href="../Chapter5/dp.html">
+            
+                    
+                    DP功能点开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/area.html">
+            
+                <a href="../Chapter5/area.html">
+            
+                    
+                    移动侦测区域设置开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Chapter6/doorbell.html">
+            
+                <a href="../Chapter6/doorbell.html">
+            
+                    
+                    门铃功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Chapter7/ota.html">
+            
+                <a href="../Chapter7/ota.html">
+            
+                    
+                    OTA功能开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/otadev.html">
+            
+                <a href="../Chapter7/otadev.html">
+            
+                    
+                    OTA 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Chapter8/cloudstorage.html">
+            
+                <a href="../Chapter8/cloudstorage.html">
+            
+                    
+                    云存储开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Chapter8/iotcloud.html">
+            
+                <a href="../Chapter8/iotcloud.html">
+            
+                    
+                    iot自动开通云储存服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Chapter8/devcloudstorage.html">
+            
+                <a href="../Chapter8/devcloudstorage.html">
+            
+                    
+                    云存储开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="echo_chromecast.html">
+            
+                <a href="echo_chromecast.html">
+            
+                    
+                    Echo show与chromecast功能开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="echo.html">
+            
+                <a href="echo.html">
+            
+                    
+                    Echo show功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.2" data-path="chromecast.html">
+            
+                <a href="chromecast.html">
+            
+                    
+                    Chromecast功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="echochromecastguide.html">
+            
+                <a href="echochromecastguide.html">
+            
+                    
+                    echoshow和chromecast操作手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Chapter10/bind.html">
+            
+                <a href="../Chapter10/bind.html">
+            
+                    
+                    设备绑定与解绑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/binddevice.html">
+            
+                <a href="../Chapter10/binddevice.html">
+            
+                    
+                    设备和app绑定关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/removedevice.html">
+            
+                <a href="../Chapter10/removedevice.html">
+            
+                    
+                    app端移除设备开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/resetdevice.html">
+            
+                <a href="../Chapter10/resetdevice.html">
+            
+                    
+                    设备主动复位实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Chapter13/warn.html">
+            
+                <a href="../Chapter13/warn.html">
+            
+                    
+                    告警开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Chapter13/motiondetect.html">
+            
+                <a href="../Chapter13/motiondetect.html">
+            
+                    
+                    移动侦测告警开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Chapter13/notifywarn.html">
+            
+                <a href="../Chapter13/notifywarn.html">
+            
+                    
+                    自定义事件文字告警开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Chapter13/definewarn.html">
+            
+                <a href="../Chapter13/definewarn.html">
+            
+                    
+                    自定义事件图文告警开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Chapter13/doorbellcall.html">
+            
+                <a href="../Chapter13/doorbellcall.html">
+            
+                    
+                    门铃推送告警
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Chapter14/aidetect.html">
+            
+                <a href="../Chapter14/aidetect.html">
+            
+                    
+                    AI 检测功能开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Chapter14/cloudaidetect.html">
+            
+                <a href="../Chapter14/cloudaidetect.html">
+            
+                    
+                    云端ai功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Chapter14/localaidetect.html">
+            
+                <a href="../Chapter14/localaidetect.html">
+            
+                    
+                    本地ai功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Chapter11/faq.html">
+            
+                <a href="../Chapter11/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Chapter12/function.html">
+            
+                <a href="../Chapter12/function.html">
+            
+                    
+                    接口说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Chromecast功能开发</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="chromecast&#x529F;&#x80FD;&#x5F00;&#x53D1;">Chromecast&#x529F;&#x80FD;&#x5F00;&#x53D1;</h1>
+<ul>
+<li>&#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#xFF1A;<br>1&#x3001;&#x8C03;&#x7528; Chromecast &#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#xFF1A;TUYA_APP_Enable_EchoShow_Chromecast<br>2&#x3001;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x97F3;&#x9891;&#x901A;&#x9053;E_CHANNEL_AUDIO_2RD&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF08;&#x56E0;&#x4E3A;chromecast&#x9700;&#x8981;&#x7279;&#x5B9A;&#x7684;aac&#x7684;&#x97F3;&#x9891;&#x683C;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x548C;&#x9884;&#x89C8;&#x7684;&#x8BED;&#x97F3;&#x51B2;&#x7A81;&#xFF0C;&#x9700;&#x8981;&#x5F00;&#x8F9F;&#x65B0;&#x7684;&#x97F3;&#x9891;&#x901A;&#x9053;&#xFF09;<br>(1)&#x3001;&#x5728;IPC_APP_Set_Media_Info&#x4E2D;&#x589E;&#x52A0;E_CHANNEL_AUDIO_2RD&#x901A;&#x9053;&#x7684;&#x5A92;&#x4F53;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;    <pre><code class="lang-C">  s_media_info.channel_enable[E_CHANNEL_AUDIO_2RD] = TRUE;         <span class="hljs-comment">/* Whether to enable local sound collection */</span>
+  s_media_info.audio_codec[E_CHANNEL_AUDIO_2RD] = TUYA_CODEC_AUDIO_AAC_ADTS;<span class="hljs-comment">/* Encoding format */</span>
+  s_media_info.audio_sample [E_CHANNEL_AUDIO_2RD]= TUYA_AUDIO_SAMPLE_8K;<span class="hljs-comment">/* Sampling Rate */</span>
+  s_media_info.audio_databits [E_CHANNEL_AUDIO_2RD]= TUYA_AUDIO_DATABITS_16;<span class="hljs-comment">/* Bit width */</span>
+  s_media_info.audio_channel[E_CHANNEL_AUDIO_2RD]= TUYA_AUDIO_CHANNEL_MONO;<span class="hljs-comment">/* channel */</span>
+  s_media_info.audio_fps[E_CHANNEL_AUDIO_2RD] = <span class="hljs-number">25</span>;<span class="hljs-comment">/* Fragments per second */</span>
+</code></pre>
+(2)&#x3001;&#x5728;TUYA_APP_Init_Ring_Buffer&#x4E2D;E_CHANNEL_AUDIO&#x901A;&#x9053;&#x521D;&#x59CB;&#x5316;&#x7684;&#x540E;&#x9762;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;E_CHANNEL_AUDIO_2RD&#x521D;&#x59CB;&#x5316;&#x7684;&#x4EE3;&#x7801;        </li>
+</ul>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span>(channel == E_CHANNEL_AUDIO_2RD)
+{
+  PR_DEBUG(<span class="hljs-string">&quot;audio_sample %d, audio_databits %d, audio_fps %d&quot;</span>,s_media_info.audio_sample[E_CHANNEL_AUDIO_2RD],s_media_info.audio_databits[E_CHANNEL_AUDIO_2RD],s_media_info.audio_fps[E_CHANNEL_AUDIO_2RD]);
+  ret = tuya_ipc_ring_buffer_init(channel, s_media_info.audio_sample[E_CHANNEL_AUDIO_2RD]*s_media_info.audio_databits[E_CHANNEL_AUDIO_2RD]/<span class="hljs-number">1024</span>,s_media_info.audio_fps[E_CHANNEL_AUDIO_2RD],<span class="hljs-number">0</span>,<span class="hljs-literal">NULL</span>);
+}
+</code></pre>
+<p>(3)&#x3001;&#x540C;E_CHANNEL_AUDIO&#x901A;&#x9053;&#x4E00;&#x6837;&#xFF0C;&#x8C03;&#x7528;TUYA_APP_Put_Frame&#x5C06;E_CHANNEL_AUDIO_2RD&#x901A;&#x9053;&#x7684;&#x97F3;&#x9891;&#x6570;&#x636E;&#x9001;&#x5165;SDK&#xFF0C;&#x6BCF;&#x4E00;&#x5E27;&#x97F3;&#x9891;pts&#x5FC5;&#x987B;&#x4E0E;&#x89C6;&#x9891;&#x7684;pts&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x5FAE;&#x79D2;&#xFF0C;&#x5728;echoshow&#x5F00;&#x53D1;&#x7AE0;&#x8282;&#x4E2D;&#x6709;&#x63D0;&#x5230;&#x89C6;&#x9891;pts&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#xFF0C;&#x5EFA;&#x8BAE;&#x91C7;&#x53D6;&#x8BBE;&#x5907;&#x65F6;&#x95F4;&#x4F5C;&#x4E3A;pts&#xFF0C;&#x90A3;&#x4E48;chromecast&#x529F;&#x80FD;&#x97F3;&#x9891;&#x7684;pts&#x7684;&#x505A;&#x6CD5;&#x5EFA;&#x8BAE;&#xFF0C;&#x9001;&#x5165;SDK&#x7684;&#x7B2C;&#x4E00;&#x5E27;&#x97F3;&#x9891;&#x7684;pts&#x4E3A;&#x8BBE;&#x5907;&#x65F6;&#x95F4;&#xFF0C;&#x6B64;&#x540E;&#x6BCF;&#x4E00;&#x5E27;&#x81EA;&#x52A0;128000&#x5FAE;&#x79D2;&#xFF08;&#x539F;&#x56E0;&#x662F;8k 16bit&#x7684;aac&#x97F3;&#x9891;&#x7684;&#x5E27;&#x95F4;&#x9694;&#x662F;128&#x6BEB;&#x79D2;&#xFF0C;&#x56E0;&#x4E3A;aac&#x7684;&#x4E00;&#x5E27;&#x539F;&#x59CB;&#x6570;&#x636E;&#x5305;&#x4E3A;1024&#x4E2A;sample&#xFF0C;samplerate&#x4E3A;8k&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;1s&#x5185;&#x7684;&#x5E27;&#x6570;&#x4E3A;8k/1024,&#x90A3;&#x4E48;&#x4E00;&#x5E27;&#x7684;&#x65F6;&#x95F4;&#x4E3A;1s / sampleRate / 1024&#xFF09;<br>3&#x3001;&#x82E5;&#x8BBE;&#x5907;&#x7AEF;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x8F93;&#x51FA; AAC &#x97F3;&#x9891;&#x683C;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D; fdk-aac &#x5F00;&#x6E90;&#x5E93;&#xFF0C;&#x5C06; PCM &#x97F3;&#x9891;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A;AAC&#xFF08;ADTS&#xFF09;&#xFF0C;&#x5E93;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x7EA6;&#x4E3A;&#xFF1A;4~5MB&#xFF0C;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x8303;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;  <a href="../../../&#x8D44;&#x6599;&#x6587;&#x6863;/pcm&#x8F6C;aac&#x6E90;&#x7801;.zip">pcm&#x8F6C;aac&#x6E90;&#x7801;.zip</a>(&#x627E;FAE&#x63D0;&#x4F9B;)<br>4&#x3001;&#x82E5;&#x8BBE;&#x5907;&#x7AEF;&#x65E5;&#x5FD7;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x5219;&#x97F3;&#x9891;&#x4FE1;&#x53F7;&#x4E0D;&#x6B63;&#x786E;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4E3B;&#x52A8;&#x5173;&#x95ED;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#xFF1A;<br><img src="chromecast.assets/image-20200310202710419.png" alt="image-20200310202710419"><br>5&#x3001;Chromecast &#x89C6;&#x9891;&#x6D41;&#x7545;&#x5EA6;&#x4F18;&#x5316;&#x5EFA;&#x8BAE;&#xFF1A;<br>a) &#x589E;&#x52A0;&#x5E27;&#x7387;&#x4E0E; I &#x796F;&#x7684;&#x9891;&#x7387;<br>b) &#x8C37;&#x6B4C;&#x4EC5;&#x6709; 7 &#x79D2;&#x949F; timeout &#x7B49;&#x5F85;&#x65F6;&#x95F4;&#xFF0C;&#x8BBE;&#x5907;&#x9700;&#x8981;&#x5BF9; chromecast &#x529F;&#x80FD;&#x7ED9;&#x4E88;&#x6700;&#x5FEB;&#x7684;&#x53CD;&#x5E94;<br>c) SDK &#x9ED8;&#x8BA4;&#x8BBE;&#x5B9A;&#x91C7;&#x7528;&#x5B50;&#x7801;&#x6D41;&#x89C6;&#x9891;&#x901A;&#x9053;&#xFF0C;&#x5B50;&#x7801;&#x6D41;&#x7684;&#x7801;&#x7387;&#x8BBE;&#x5B9A;&#x8303;&#x56F4;&#x9700;&#x8981;&#x4E0B;&#x964D;&#x81F3;&#xFF1A;300~500kbps<br>6&#x3001;&#x9A8C;&#x8BC1; chromecast&#xFF1A;&#x5728;&#x8BBE;&#x5907;&#x6536;&#x5230;&#x670D;&#x52A1;&#x7AEF;&#x547D;&#x4EE4;&#x5E76;&#x53CD;&#x9988;&#x4FE1;&#x53F7;&#x65F6;&#xFF0C;&#x590D;&#x5236;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5728;&#x7535;&#x8111;&#x7AEF;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF1A;
+&#x82E5;&#x529F;&#x80FD;&#x6B63;&#x5E38;&#xFF0C;&#x5219;&#x80FD;&#x83B7;&#x53D6;&#x5230;&#x8BBE;&#x5907;&#x7AEF;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x4FE1;&#x606F;&#xFF0C;&#x547D;&#x4EE4;&#xFF1A;ffplay -v debug +&#xFF08;&#x65E5;&#x5FD7;&#x4E2D;&#x7684; url&#xFF09;
+&#x4EE5;&#x4E0B;&#x56FE;&#x4E3A;&#x4F8B;:ffplay -v debug rtmp://alxs1.tuyaus.com:1935/hls/8316047019281803308
+<img src="chromecast.assets/image-20200310202847537.png" alt="image-20200310202847537"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="echo.html" class="navigation navigation-prev " aria-label="Previous page: Echo show功能开发">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="echochromecastguide.html" class="navigation navigation-next " aria-label="Next page: echoshow和chromecast操作手册">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Chromecast功能开发","level":"1.10.2","depth":2,"next":{"title":"echoshow和chromecast操作手册","level":"1.10.3","depth":2,"path":"Chapter9/echochromecastguide.md","ref":"Chapter9/echochromecastguide.md","articles":[]},"previous":{"title":"Echo show功能开发","level":"1.10.1","depth":2,"path":"Chapter9/echo.md","ref":"Chapter9/echo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter9/chromecast.md","mtime":"2020-03-11T12:42:10.026Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-11T12:57:15.269Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
