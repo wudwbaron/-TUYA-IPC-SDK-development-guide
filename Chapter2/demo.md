@@ -12,9 +12,9 @@ https://github.com/TuyaInc/TUYA_IPC_SDK/blob/master/Stable/linux-ubuntu-6.2.0_64
 修改user_main.c文件，将申请到的PID,UUID与AUTHKEY替换以下的宏定义  
 说明： PID,UUID与AUTHKEY可以联系涂鸦项目经理获取或者在iot平台账号申请<div id = "pid" >(pid创建教程)</div> 
 ```C
-    #define IPC_APP_AUTHKEY         "tuyaOneAuthkeyForOneUUID"
-    #define IPC_APP_AUTHKEY         "tuyaOneAuthkeyForOneUUID"
-    #define IPC_APP_AUTHKEY         "tuyaOneAuthkeyForOneUUID"     
+#define IPC_APP_PID             "tuyapid" 
+#define IPC_APP_UUID            "tuyauuid"
+#define IPC_APP_AUTHKEY         "tuyaauthkey" 
 ```
 
 * 运行Demo代码  

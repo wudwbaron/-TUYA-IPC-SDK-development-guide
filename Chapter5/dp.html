@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="area.html" />
+    <link rel="next" href="iotlog.html" />
     
     
     <link rel="prev" href="../Chapter4/audio.html" />
@@ -239,20 +239,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="../Chapter3/zbar.html">
-            
-                <a href="../Chapter3/zbar.html#zbar">
-            
-                    
-                    zbar库的使用
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.7" data-path="../Chapter3/app_scan_qrcode.html">
+        <li class="chapter " data-level="1.4.6" data-path="../Chapter3/app_scan_qrcode.html">
             
                 <a href="../Chapter3/app_scan_qrcode.html">
             
@@ -342,12 +329,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="area.html">
+        <li class="chapter " data-level="1.6.1" data-path="iotlog.html">
             
-                <a href="area.html">
+                <a href="iotlog.html">
             
                     
-                    移动侦测区域设置开发
+                    iot日志查询方法
             
                 </a>
             
@@ -522,7 +509,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/binddevice.html">
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/iotunbinddevice.html">
+            
+                <a href="../Chapter10/iotunbinddevice.html">
+            
+                    
+                    IOT平台上解绑设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/binddevice.html">
             
                 <a href="../Chapter10/binddevice.html">
             
@@ -535,7 +535,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/removedevice.html">
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/removedevice.html">
             
                 <a href="../Chapter10/removedevice.html">
             
@@ -548,7 +548,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/resetdevice.html">
+        <li class="chapter " data-level="1.11.4" data-path="../Chapter10/resetdevice.html">
             
                 <a href="../Chapter10/resetdevice.html">
             
@@ -767,6 +767,93 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x529F;&#x80FD;&#x70B9;&#x5F00;&#x53D1;">&#x529F;&#x80FD;&#x70B9;&#x5F00;&#x53D1;</h1>
+<ul>
+<li><p>pid&#x7684;&#x6982;&#x5FF5;<br>&#x5728;&#x6D82;&#x9E26;&#x5E73;&#x53F0;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x4EA7;&#x54C1;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;product id&#x7B80;&#x79F0;pid&#xFF0C;&#x8FD9;&#x4E2A;pid&#x5728;&#x5E73;&#x53F0;&#x4E0A;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x4EA7;&#x54C1;id&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;id&#x4E0B;&#x7684;&#x6240;&#x6709;&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x90FD;&#x4E00;&#x81F4;</p>
+</li>
+<li><p>dp&#x70B9;&#x7684;&#x6982;&#x5FF5;
+data point&#x7B80;&#x79F0;dp&#x70B9;&#xFF0C;&#x8BBE;&#x5907;&#x5728;&#x521B;&#x5EFA;pid&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x9009;&#x62E9;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#x5C31;&#x662F;&#x4EE3;&#x7801;&#x4E2D;&#x7684;dp&#x70B9;&#xFF0C;&#x8BBE;&#x5907;&#x7AEF;&#x548C;app&#x4E0A;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x70B9;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x4E8B;&#x4EF6;&#x63A8;&#x9001;&#x90FD;&#x662F;&#x57FA;&#x4E8E;dp&#x70B9;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;dp&#x70B9;&#x5C31;&#x662F;&#x8BBE;&#x5907;&#x7AEF;&#x548C;app&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x7684;&#x901A;&#x9053;&#xFF0C;&#x5173;&#x4E8E;&#x914D;&#x7F6E;&#x7684;dp&#x6570;&#x636E;&#x7531;&#x5F00;&#x53D1;&#x8005;&#x8FDB;&#x884C;&#x4FDD;&#x5B58;&#x548C;&#x8BFB;&#x53D6;&#x3002;    </p>
+</li>
+<li><p>&#x9879;&#x76EE;&#x7ACB;&#x9879;&#x540E;&#x6D82;&#x9E26;&#x9879;&#x76EE;&#x7ECF;&#x7406;&#x4F1A;&#x6839;&#x636E;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x9700;&#x6C42;&#x4E3A;&#x5BA2;&#x6237;&#x521B;&#x5EFA;pid&#xFF0C;&#x914D;&#x7F6E;&#x597D;&#x76F8;&#x5173;dp&#x70B9;&#x548C;&#x544A;&#x8B66;&#xFF0C;&#x5BA2;&#x6237;&#x5982;&#x9700;&#x66F4;&#x6539;dp&#x70B9;&#x9700;&#x8054;&#x7CFB;&#x9879;&#x76EE;&#x7ECF;&#x7406;&#xFF0C;&#x5148;&#x8FDB;&#x884C;&#x6C9F;&#x901A;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x4FEE;&#x6539;&#x540E;&#x9700;&#x8981;&#x628A;&#x8C03;&#x8BD5;&#x4E2D;&#x7684;&#x8BBE;&#x5907;&#x91CD;&#x65B0;&#x914D;&#x7F51;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x91CD;&#x65B0;&#x914D;&#x7F51;&#x4F1A;&#x51FA;&#x73B0;dp&#x70B9;&#x65E0;&#x6CD5;&#x4E0A;&#x62A5;&#x4E0B;&#x53D1;&#x7B49;&#x5F02;&#x5E38;&#x60C5;&#x51B5;&#xFF08;&#x5F88;&#x91CD;&#x8981;&#xFF09;   </p>
+</li>
+<li><p>dp&#x70B9;&#x6309;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5206;&#x7C7B;&#xFF1A;<br><img src="dp.assets/image-20200313160213503.png" alt="image-20200313160213503">  </p>
+<p><img src="dp.assets/image-20200313160241698.png" alt="image-20200313160241698">  </p>
+<p><img src="dp.assets/image-20200313160809299.png" alt="image-20200313160809299">  </p>
+<p><img src="dp.assets/image-20200313161010292.png" alt="image-20200313161010292">  </p>
+<p><img src="dp.assets/image-20200313161148395.png" alt="image-20200313161148395">  </p>
+</li>
+<li><p>&#x529F;&#x80FD;&#x70B9;&#x5F00;&#x53D1;&#xFF1A;<br>&#x786E;&#x8BA4;&#x8BBE;&#x5907;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6253;&#x5F00;iot&#x5E73;&#x53F0;&#x529F;&#x80FD;&#x5B9A;&#x4E49;&#x754C;&#x9762;&#xFF0C;&#x786E;&#x8BA4;&#x5F00;&#x53D1;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x9009;&#x62E9;&#x6B63;&#x786E;&#x7684;dp&#x70B9;&#xFF0C;&#x786E;&#x8BA4;dp&#x70B9;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x53C2;&#x8003;SDK&#x4E2D;&#x7684;demo&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#xFF0C;SDK&#x4E2D;&#x53EA;&#x9009;&#x62E9;&#x4E86;&#x4E00;&#x90E8;&#x5206;&#x6BD4;&#x8F83;&#x5E38;&#x7528;&#x7684;dp&#x70B9;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#xFF0C;&#x5982;&#x679C;&#x78B0;&#x5230;sdk&#x4E2D;&#x6CA1;&#x6709;&#x7684;dp&#x70B9;&#xFF0C;&#x9700;&#x8981;&#x53C2;&#x8003;&#x7C7B;&#x4F3C;dp&#x7684;&#x6570;&#x636E;&#x5904;&#x7406;&#x6D41;&#x7A0B;&#x5F00;&#x53D1;&#x65B0;dp&#x70B9;&#x7684;&#x4E0B;&#x53D1;&#x548C;&#x4E0A;&#x62A5;&#x4EE5;&#x53CA;&#x5BF9;&#x5E94;&#x529F;&#x80FD;&#x7684;&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;
+1&#x3001;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x7684;&#x6848;&#x4F8B;&#xFF1A;  </p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> TUYA_DP_LIGHT</span>
+<span class="hljs-function">STATIC VOID <span class="hljs-title">handle_DP_LIGHT</span><span class="hljs-params">(IN TY_OBJ_DP_S *p_obj_dp)</span>
+</span>{
+  BOOL_T light_on_off = check_dp_bool_invalid(p_obj_dp);
+
+  IPC_APP_set_light_onoff(light_on_off);
+  light_on_off = IPC_APP_get_light_onoff();
+
+  respone_dp_bool(TUYA_DP_LIGHT, light_on_off);
+}
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p>2&#x3001;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x7684;&#x6848;&#x4F8B;&#xFF1A;  </p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> TUYA_DP_NIGHT_MODE</span>
+<span class="hljs-function">STATIC VOID <span class="hljs-title">handle_DP_NIGHT_MODE</span><span class="hljs-params">(IN TY_OBJ_DP_S *p_obj_dp)</span>
+</span>{
+  <span class="hljs-keyword">if</span>( (p_obj_dp == <span class="hljs-literal">NULL</span>) || (p_obj_dp-&gt;type != PROP_ENUM) )
+  {
+      <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Error!! type invalid %d \r\n&quot;</span>, p_obj_dp-&gt;type);
+      <span class="hljs-keyword">return</span>;
+  }
+  CHAR_T tmp_str[<span class="hljs-number">2</span>] = {<span class="hljs-number">0</span>};
+  tmp_str[<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;0&apos;</span> + p_obj_dp-&gt;value.dp_enum;
+
+  IPC_APP_set_night_mode(tmp_str);
+  CHAR_T *p_night_mode = IPC_APP_get_night_mode();
+
+  respone_dp_enum(TUYA_DP_NIGHT_MODE, p_night_mode);
+}
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p>3&#x3001;&#x6570;&#x503C;&#x7C7B;&#x578B;&#x7684;&#x4E3E;&#x4F8B;&#xFF1A;  </p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> TUYA_DP_SD_STATUS_ONLY_GET</span>
+<span class="hljs-function">STATIC VOID <span class="hljs-title">handle_DP_SD_STATUS_ONLY_GET</span><span class="hljs-params">(IN TY_OBJ_DP_S *p_obj_dp)</span>
+</span>{
+  INT_T sd_status = IPC_APP_get_sd_status();
+
+  respone_dp_value(TUYA_DP_SD_STATUS_ONLY_GET, sd_status);
+}
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p>4&#x3001;string&#x7C7B;&#x578B;&#x7684;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> TUYA_DP_SD_STORAGE_ONLY_GET</span>
+<span class="hljs-function">STATIC VOID <span class="hljs-title">handle_DP_SD_STORAGE_ONLY_GET</span><span class="hljs-params">(IN TY_OBJ_DP_S *p_obj_dp)</span>
+</span>{
+  CHAR_T tmp_str[<span class="hljs-number">100</span>] = {<span class="hljs-number">0</span>};
+
+  UINT_T total = <span class="hljs-number">100</span>;
+  UINT_T used = <span class="hljs-number">0</span>;
+  UINT_T empty = <span class="hljs-number">100</span>;
+  IPC_APP_get_sd_storage(&amp;total, &amp;used, &amp;empty);
+
+  <span class="hljs-comment">//&quot;total capacity|Current usage|remaining capacity&quot;</span>
+  <span class="hljs-built_in">snprintf</span>(tmp_str, <span class="hljs-number">100</span>, <span class="hljs-string">&quot;%u|%u|%u&quot;</span>, total, used, empty);
+  respone_dp_str(TUYA_DP_SD_STORAGE_ONLY_GET, tmp_str);
+}
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p>&#x8BF4;&#x660E;&#xFF1A;string&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF0C;&#x9700;&#x8981;&#x6709;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF0C;&#x5927;&#x90E8;&#x5206;string&#x7C7B;&#x578B;&#x7684;dp&#x70B9;SDK&#x4E2D;&#x90FD;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x4E2D;&#x8BF7;&#x5BF9;&#x6BD4;SDK&#x4E2D;demo&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5728;&#x9762;&#x677F;&#x5B9A;&#x5236;&#x7684;&#x9700;&#x6C42;&#x4E2D;&#x9700;&#x8981;&#x786E;&#x8BA4;&#x597D;&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#xFF0C;&#x786E;&#x8BA4;&#x597D;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF0C;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x662F;&#x7528;CJson&#x683C;&#x5F0F;&#x3002;<br>&#x6BD4;&#x5982;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#x662F;{&quot;169&quot;:&quot;{\&quot;num\&quot;:1,\&quot;region0\&quot;:{\&quot;x\&quot;:0,\&quot;y\&quot;:0,\&quot;xlen\&quot;:50,\&quot;ylen\&quot;:50}}&quot;}
+&#x90A3;&#x4E48;&#x5728;&#x7EC4;&#x5408;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5728;&#x53CC;&#x5F15;&#x53F7;&#x524D;&#x52A0;&#x4E09;&#x4E2A;\\&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;169dp&#x70B9;&#x7684;&#x6570;&#x636E;&#x7EC4;&#x5408;&#x65B9;&#x5F0F;&#xFF1A;     </p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (<span class="hljs-number">0</span> == i){
+          <span class="hljs-built_in">snprintf</span>(s_alarm_zone, <span class="hljs-number">256</span>,<span class="hljs-string">&quot;{\\\&quot;num\\\&quot;:%d&quot;</span>,strAlarmZoneInfo.iZoneNum);
+      }
+<span class="hljs-built_in">snprintf</span>(region, <span class="hljs-number">64</span>, <span class="hljs-string">&quot;,\\\&quot;region%d\\\&quot;:{\\\&quot;x\\\&quot;:%d,\\\&quot;y\\\&quot;:%d,\\\&quot;xlen\\\&quot;:%d,\\\&quot;ylen\\\&quot;:%d}&quot;</span>,i,strAlarmZoneInfo.alarmZone[i].pointX,\
+          strAlarmZoneInfo.alarmZone[i].pointY,strAlarmZoneInfo.alarmZone[i].width,strAlarmZoneInfo.alarmZone[i].height);
+</code></pre>
+<p>5&#x3001;raw&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF1A;
+&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x4E0D;&#x4F1A;&#x8BA9;&#x5BA2;&#x6237;&#x8005;&#x81EA;&#x5DF1;&#x53BB;&#x8C03;&#x7528;&#xFF0C;&#x90FD;&#x662F;SDK&#x5C01;&#x88C5;&#x597D;&#x7684;&#xFF0C;&#x8BBE;&#x5907;&#x7AEF;&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x6210;&#x529F;&#x4E0A;&#x62A5;&#x540E;iot&#x5E73;&#x53F0;&#x65E5;&#x5FD7;&#x4E5F;&#x80FD;&#x67E5;&#x627E;&#x5230;&#x76F8;&#x5173;dp&#x6570;&#x636E;&#xFF0C;&#x4F8B;&#x5982;&#x79FB;&#x52A8;&#x4FA6;&#x6D4B;&#x544A;&#x8B66;&#x8C03;&#x7528;tuya_ipc_notify_motion_detect&#x4E0A;&#x62A5;115dp&#x70B9;&#xFF0C;raw&#x6570;&#x636E;&#x4E3A;&#x56FE;&#x7247;&#xFF1B;&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x6587;&#x4E8B;&#x4EF6;&#x544A;&#x8B66;tuya_ipc_notify_with_event&#x4E0A;&#x62A5;185dp&#x70B9;&#xFF0C;&#x6570;&#x636E;&#x4E3A;raw&#x6570;&#x636E;&#xFF1B;&#x95E8;&#x94C3;&#x547C;&#x53EB;tuya_ipc_door_bell_press&#x4E0A;&#x62A5;136&#x548C;154dp&#x70B9;&#xFF0C;136&#x4E3A;&#x5B57;&#x7B26;&#x578B;&#xFF0C;154&#x4E3A;raw&#x578B;&#x56FE;&#x7247;&#x6570;&#x636E;&#xFF0C;&#x5173;&#x4E8E;raw&#x6570;&#x636E;&#x76F8;&#x5173;&#x7684;&#x8BE6;&#x7EC6;&#x529F;&#x80FD;&#x7684;&#x5F00;&#x53D1;&#x53EF;&#x53C2;&#x8003;&#x544A;&#x8B66;&#x5F00;&#x53D1;&#x7AE0;&#x8282;&#x3002;   </p>
+</li>
+<li>&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#x600E;&#x4E48;&#x80FD;&#x786E;&#x8BA4;&#x6570;&#x636E;&#x7EC4;&#x5408;&#x7684;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x5462;&#xFF1F;<br>1&#x3001;&#x9996;&#x5148;&#x786E;&#x8BA4;&#x8C03;&#x7528;respone_dp_str&#x7B49;&#x51FD;&#x6570;&#x4E0A;&#x62A5;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x8BBE;&#x5907;&#x65E5;&#x5FD7;&#x6CA1;&#x6709;&#x62A5;error<br>2&#x3001;&#x5728;iot&#x5F00;&#x53D1;&#x8005;&#x5E73;&#x53F0;&#x4E2D;&#x7684;&#x65E5;&#x5FD7;&#x67E5;&#x8BE2;&#x754C;&#x9762;&#x4E2D;&#x67E5;&#x770B;&#x8BE5;dp&#x662F;&#x5426;&#x6709;&#x4E0A;&#x62A5;&#xFF0C;&#x4EE5;&#x53CA;&#x4E0A;&#x62A5;&#x7684;&#x6570;&#x636E;&#x662F;&#x5426;&#x548C;&#x534F;&#x8BAE;&#x89C4;&#x5B9A;&#x7684;&#x4E00;&#x6837;  </li>
+</ul>
 
                                 
                                 </section>
@@ -799,7 +886,7 @@
                 </a>
                 
                 
-                <a href="area.html" class="navigation navigation-next " aria-label="Next page: 移动侦测区域设置开发">
+                <a href="iotlog.html" class="navigation navigation-next " aria-label="Next page: iot日志查询方法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -810,7 +897,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"DP功能点开发","level":"1.6","depth":1,"next":{"title":"移动侦测区域设置开发","level":"1.6.1","depth":2,"path":"Chapter5/area.md","ref":"Chapter5/area.md","articles":[]},"previous":{"title":"对讲功能开发","level":"1.5.3","depth":2,"path":"Chapter4/audio.md","ref":"Chapter4/audio.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter5/dp.md","mtime":"2019-11-20T12:19:20.380Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-12T03:17:26.151Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"DP功能点开发","level":"1.6","depth":1,"next":{"title":"iot日志查询方法","level":"1.6.1","depth":2,"path":"Chapter5/iotlog.md","ref":"Chapter5/iotlog.md","articles":[]},"previous":{"title":"对讲功能开发","level":"1.5.3","depth":2,"path":"Chapter4/audio.md","ref":"Chapter4/audio.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter5/dp.md","mtime":"2020-03-13T08:56:39.782Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-16T12:02:05.197Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

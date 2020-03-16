@@ -17,3 +17,7 @@
 ![image-20200306174851218](echo_chromecast.assets/image-20200306174851218.png)
 
 ![image-20200306174924307](echo_chromecast.assets/image-20200306174924307.png)
+
+4、开通IPC视频流媒体推送  
+
+![image-20200316114701013](echo_chromecast.assets/image-20200316114701013.png)

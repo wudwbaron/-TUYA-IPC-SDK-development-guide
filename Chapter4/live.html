@@ -239,20 +239,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="../Chapter3/zbar.html">
-            
-                <a href="../Chapter3/zbar.html#zbar">
-            
-                    
-                    zbar库的使用
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.7" data-path="../Chapter3/app_scan_qrcode.html">
+        <li class="chapter " data-level="1.4.6" data-path="../Chapter3/app_scan_qrcode.html">
             
                 <a href="../Chapter3/app_scan_qrcode.html">
             
@@ -342,12 +329,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/area.html">
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/iotlog.html">
             
-                <a href="../Chapter5/area.html">
+                <a href="../Chapter5/iotlog.html">
             
                     
-                    移动侦测区域设置开发
+                    iot日志查询方法
             
                 </a>
             
@@ -522,7 +509,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/binddevice.html">
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/iotunbinddevice.html">
+            
+                <a href="../Chapter10/iotunbinddevice.html">
+            
+                    
+                    IOT平台上解绑设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/binddevice.html">
             
                 <a href="../Chapter10/binddevice.html">
             
@@ -535,7 +535,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/removedevice.html">
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/removedevice.html">
             
                 <a href="../Chapter10/removedevice.html">
             
@@ -548,7 +548,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/resetdevice.html">
+        <li class="chapter " data-level="1.11.4" data-path="../Chapter10/resetdevice.html">
             
                 <a href="../Chapter10/resetdevice.html">
             
@@ -795,7 +795,7 @@ requestIframeCB: call back function to request one I frame from video decoder. s
 */</span>
 <span class="hljs-function">OPERATE_RET <span class="hljs-title">tuya_ipc_ring_buffer_init</span><span class="hljs-params">(CHANNEL_E channel, UINT_T bitrate, UINT_T fps, UINT_T max_buffer_seconds, FUNC_REQUEST_I_FRAME requestIframeCB)</span></span>;
 </code></pre>
-<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;:<br>max_buffer_seconds&#x8868;&#x793A;&#x6700;&#x5927;&#x7684;&#x89C6;&#x9891;&#x7F13;&#x5B58;&#x65F6;&#x95F4;&#xFF0C;&#x6362;&#x7B97;&#x6210;&#x89C6;&#x9891;&#x7F13;&#x5B58;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x662F;bitrate*max_buffer_seconds*I&#x5E27;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF08;&#x4E3B;&#x7801;&#x6D41;300k&#xFF0C;&#x5B50;&#x7801;&#x6D41;200k&#xFF09;&#xFF0C;&#x9650;&#x5236;&#x662F;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;10s&#xFF0C;&#x6700;&#x5927;&#x503C;&#x4E3A;10s&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;gop&#x5305;&#x542B;&#x7684;&#x65F6;&#x95F4;(&#x6BD4;&#x5982;gop&#x4E3A;20&#xFF0C;fps&#x4E3A;10,&#x5219;&#x8FD9;&#x4E2A;&#x6700;&#x5C0F;&#x503C;&#x4E3A;gop/fps=2s)<br>requestIframeCB&#x8868;&#x793A;&#x5F3A;&#x5236;i&#x5E27;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#xFF0C;SDK&#x4F1A;&#x6839;&#x636E;&#x9700;&#x8981;&#x6765;&#x8C03;&#x7528;&#xFF0C;&#x5B9E;&#x73B0;&#x5F3A;&#x5236;i&#x5E27;&#x53EF;&#x4EE5;&#x4F18;&#x5316;&#x51FA;&#x56FE;&#x65F6;&#x95F4;  </p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;:<br>max_buffer_seconds&#x8868;&#x793A;&#x6700;&#x5927;&#x7684;&#x89C6;&#x9891;&#x7F13;&#x5B58;&#x65F6;&#x95F4;&#xFF0C;&#x6362;&#x7B97;&#x6210;&#x89C6;&#x9891;&#x7F13;&#x5B58;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x662F;fps<em>max_buffer_seconds\</em>I&#x5E27;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF08;&#x4E3B;&#x7801;&#x6D41;300k&#xFF0C;&#x5B50;&#x7801;&#x6D41;200k&#xFF09;&#xFF0C;&#x9650;&#x5236;&#x662F;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;10s&#xFF0C;&#x6700;&#x5927;&#x503C;&#x4E3A;10s&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;gop&#x5305;&#x542B;&#x7684;&#x65F6;&#x95F4;(&#x6BD4;&#x5982;gop&#x4E3A;20&#xFF0C;fps&#x4E3A;10,&#x5219;&#x8FD9;&#x4E2A;&#x6700;&#x5C0F;&#x503C;&#x4E3A;gop/fps=2s)<br>requestIframeCB&#x8868;&#x793A;&#x5F3A;&#x5236;i&#x5E27;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#xFF0C;SDK&#x4F1A;&#x6839;&#x636E;&#x9700;&#x8981;&#x6765;&#x8C03;&#x7528;&#xFF0C;&#x5B9E;&#x73B0;&#x5F3A;&#x5236;i&#x5E27;&#x53EF;&#x4EE5;&#x4F18;&#x5316;&#x51FA;&#x56FE;&#x65F6;&#x95F4;  </p>
 </li>
 <li><p>&#x5F00;&#x542F;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;TUYA_APP_Put_Frame&#x5F80;&#x89C6;&#x9891;&#x901A;&#x9053;&#x585E;&#x539F;&#x59CB;&#x7684;&#x89C6;&#x9891;&#x5E27;&#x6570;&#x636E;&#xFF0C;&#x7F16;&#x7801;&#x5668;&#x6BCF;&#x7F16;&#x7801;&#x4E00;&#x5E27;&#x5C31;&#x5F80;SDK&#x9001;&#x4E00;&#x5E27;,&#xFF0C;&#x4E3B;&#x8981;&#x8C03;&#x7528;tuya_ipc_ring_buffer_append_data&#x5F80;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E2A;&#x901A;&#x9053;&#x585E;&#x6D41;    </p>
 </li>
@@ -853,7 +853,7 @@ requestIframeCB: call back function to request one I frame from video decoder. s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"视频预览开发","level":"1.5.1","depth":2,"next":{"title":"本地回放功能开发","level":"1.5.2","depth":2,"path":"Chapter4/recoder.md","ref":"Chapter4/recoder.md","articles":[]},"previous":{"title":"音视频开发","level":"1.5","depth":1,"path":"Chapter4/av.md","ref":"Chapter4/av.md","articles":[{"title":"视频预览开发","level":"1.5.1","depth":2,"path":"Chapter4/live.md","ref":"Chapter4/live.md","articles":[]},{"title":"本地回放功能开发","level":"1.5.2","depth":2,"path":"Chapter4/recoder.md","ref":"Chapter4/recoder.md","articles":[]},{"title":"对讲功能开发","level":"1.5.3","depth":2,"path":"Chapter4/audio.md","ref":"Chapter4/audio.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter4/live.md","mtime":"2020-03-12T02:29:03.400Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-12T03:17:26.151Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"视频预览开发","level":"1.5.1","depth":2,"next":{"title":"本地回放功能开发","level":"1.5.2","depth":2,"path":"Chapter4/recoder.md","ref":"Chapter4/recoder.md","articles":[]},"previous":{"title":"音视频开发","level":"1.5","depth":1,"path":"Chapter4/av.md","ref":"Chapter4/av.md","articles":[{"title":"视频预览开发","level":"1.5.1","depth":2,"path":"Chapter4/live.md","ref":"Chapter4/live.md","articles":[]},{"title":"本地回放功能开发","level":"1.5.2","depth":2,"path":"Chapter4/recoder.md","ref":"Chapter4/recoder.md","articles":[]},{"title":"对讲功能开发","level":"1.5.3","depth":2,"path":"Chapter4/audio.md","ref":"Chapter4/audio.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter4/live.md","mtime":"2020-03-12T14:24:47.811Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-16T12:02:05.197Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
