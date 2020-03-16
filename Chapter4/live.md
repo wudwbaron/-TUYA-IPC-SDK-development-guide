@@ -46,6 +46,5 @@ OPERATE_RET tuya_ipc_ring_buffer_append_data(CHANNEL_E channel, UCHAR_T *addr, U
 2、涂鸦 SDK 目前已经支持 H.264 和h265编码视频数据(h265请使用sdk版本4.7.4配合涂鸦智能app3.15.1版本进行调试)  
 3、若需要占满 App 屏幕，视频分辨率请使用 16 : 9  
 4、GOP建议为fps的2~3倍  
-5、[FAQ](https://wudwbaron.github.io/FAQ/preview.html)  
-6、如果在开发过程中出现以下问题则问题为码流i帧的大小超过了SDK限制应该优化编码参数，如图片亮度、锐度等参数  
+5、如果在开发过程中出现以下问题则问题为码流i帧的大小超过了SDK限制应该优化编码参数，如图片亮度、锐度等参数  
 <div align=center><img  src = "dataoversize.png"alt="img" style="zoom:150%;"></div>  

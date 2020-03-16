@@ -25,4 +25,3 @@ Smart配网需要网卡支持进入sniffer模式，捕获空气中的所有无�
 ```
 * 当用户输入了错误的wifi密码的情况下：应该将设备的状态置为WSS_PASSWD_WRONG，并且通过语音或者提示灯提示用户重置设备后重新配网。  
 * 注意：请先理解上图的配网流程再进行开发  
-* [FAQ](https://wudwbaron.github.io/FAQ/connectwifi.html)  

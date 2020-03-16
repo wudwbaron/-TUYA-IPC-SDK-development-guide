@@ -1,3 +1,4 @@
-# FAQ
+# 概述
+  本文档主要介绍开发者在使用涂鸦IPC SDK进行IPC开发过程中问题的答疑，方便开发者自行定位问题，提高开发效率。
 
-* [FAQ](https://wudwbaron.github.io/FAQ/connectwifi.html)
+

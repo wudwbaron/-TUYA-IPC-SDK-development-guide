@@ -9,6 +9,5 @@ App扫描设备二维码配网,这个配网的应用场景是一些带屏的终�
 * 确认tuya_ipc_wired_demo.c 中NET_DEV和当前设备使用的wifi或者有线网卡名称一致（默认eth0） 
 * 确认在hwl_bnw_get_ip返回设备的 IP 地址以及hwl_bnw_get_mac返回mac地址  
 * 调用tuya_ipc_get_qrcode获取短链接，并将该短链接生成二维码显示在屏幕上
-* app扫描设备上的二维码进行配网
-* [FAQ](https://wudwbaron.github.io/FAQ/connectwifi.html)
+* app扫描设备上的二维码进行配网  
 

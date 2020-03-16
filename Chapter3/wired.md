@@ -43,6 +43,4 @@
     }WF_STATION_STAT_E;
 ```
 
-* 注意：一和二两种配网方式的流程基本一致，不同的是初始化SDK和调用网络状态的接口不同
-
-* [FAQ](https://wudwbaron.github.io/FAQ/connectwifi.html)
+* 注意：一和二两种配网方式的流程基本一致，不同的是初始化SDK和调用网络状态的接口不同  

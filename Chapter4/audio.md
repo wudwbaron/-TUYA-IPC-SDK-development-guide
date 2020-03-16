@@ -29,7 +29,7 @@
     requestIframeCB: call back function to request one I frame from video decoder. set to NULL if not needed or for NON-video stream.
     */
     OPERATE_RET tuya_ipc_ring_buffer_init(CHANNEL_E channel, UINT_T bitrate, UINT_T fps, UINT_T max_buffer_seconds, FUNC_REQUEST_I_FRAME requestIframeCB);  
-```  
+```
 
 需要注意的是:   
   max_buffer_seconds：音频开发默认0就可以   
@@ -41,13 +41,12 @@
     */
     OPERATE_RET tuya_ipc_ring_buffer_append_data(CHANNEL_E channel, UCHAR_T *addr, UINT_T size, MEDIA_FRAME_TYPE_E type, UINT64_T pts);
 
-```  
+```
 参数说明：主要包含通道号，数据帧的大小类型等  
 * 特别说明：  
 1、以上步骤就是app监听功能开发的核心流程  
 2、音频上传最大长度为1400  
-3、[FAQ](https://wudwbaron.github.io/FAQ/preview.html)  
-4、音频卡顿，异响问题排查方法：在音频数据送入SDK之前将音频数据保存到sd卡，PC端使用g711player去播放，看是否异常  
+3、音频卡顿，异响问题排查方法：在音频数据送入SDK之前将音频数据保存到sd卡，PC端使用g711player去播放，看是否异常  
 <div align=center><img  src = "g711player.jpg"alt="img" style="zoom:150%;"></div>  
 * 二、设备端播放App发送过来的音频  
 * 开发流程：   
@@ -77,7 +76,7 @@
 
     }
 ```
-  
+
 * App 默认下发 G711U 格式音频，设备端如需以 PCM 格式播放，需要调用函数：
 tuya_g711_decode 对下发的音频做转码处理    
 
