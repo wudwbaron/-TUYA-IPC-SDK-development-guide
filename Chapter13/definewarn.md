@@ -21,7 +21,7 @@ OPERATE_RET tuya_ipc_notify_with_event(IN CONST CHAR_T *snap_buffer, IN CONST UI
 ```
 其中NOTIFICATION_NAME_E表示事件类型，snap_buffer表示图片数据，需保证图片数据有效且大小不超过100KB  
 4、打开app上的推送通知权限  
-5、我们SDK的移动侦测接口内部封装了一个固定的dp点185，常用的排查方法是在iot平台的运营中查询设备日志，输入当前调试的设备id(app中设备信息里面虚拟id)，选择当前日期进行日志查询  
+5、我们SDK的自定义事件告警推送接口内部封装了一个固定的dp点185，常用的排查方法是在iot平台的运营中查询设备日志，输入当前调试的设备id(app中设备信息里面虚拟id)，选择当前日期进行日志查询  
 
 ![iot查日志](motiondetect.assets/iot查日志.jpg)  
 6、确认设备有上报185dp点，且每次图片信息都不一致，排查方法和移动侦测类似
