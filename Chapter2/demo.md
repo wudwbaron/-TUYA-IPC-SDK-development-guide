@@ -7,7 +7,7 @@
 ```
 * SDK，登陆GitHub：       
 说明： Ubuntu Demon 仅支持64位操作系统  
-https://github.com/TuyaInc/TUYA_IPC_SDK/blob/master/Stable/linux-ubuntu-6.2.0_64Bit/tuya_ipc_sdk_4.7.4_wifi_wired_linux-ubuntu-6.2.0_64Bit_2020_02_06_19_30_47.tar.gz
+https://github.com/TuyaInc/TUYA_IPC_SDK/tree/master/Stable/linux-ubuntu-6.2.0_64Bit  
 * 修改Demo代码  
 修改user_main.c文件，将申请到的PID,UUID与AUTHKEY替换以下的宏定义  
 说明： PID,UUID与AUTHKEY可以联系涂鸦项目经理获取或者在iot平台账号申请<div id = "pid" >(pid创建教程)</div> 

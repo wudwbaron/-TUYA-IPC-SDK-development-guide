@@ -787,6 +787,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.14.7" data-path="devlog.html">
+            
+                <a href="devlog.html">
+            
+                    
+                    设备日志处理问题
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -863,6 +876,7 @@ ringbuffer &#x5373;&#x53EF;&#x3002;SDK &#x5E93;&#x6587;&#x4EF6;&#x5DF2;&#x5B9E;&
 <p>9&#x3001;&#x58F0;&#x97F3;&#x51FA;&#x73B0;&#x5361;&#x987F;&#x5982;&#x4F55;&#x6392;&#x67E5;&#xFF1F;<br>(1)&#x6392;&#x67E5;&#x7F16;&#x7801;&#x5668;&#x7684;&#x7F16;&#x7801;&#x4FE1;&#x606F;&#x662F;&#x5426;&#x4E0E;IPC_APP_Set_Media_Info&#x4E2D;&#x8BBE;&#x7F6E;&#x7684;&#x97F3;&#x9891;&#x4FE1;&#x606F;&#x4E00;&#x81F4;<br>(2)&#x628A;&#x9001;&#x5165;SDK&#x4E2D;&#x7684;&#x97F3;&#x9891;&#x6D41;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5230;&#x672C;&#x5730;&#xFF0C;&#x7528;Audacity&#x64AD;&#x653E;&#x662F;&#x5426;&#x5F02;&#x5E38;  </p>
 <p>10&#x3001;&#x9884;&#x89C8;&#x51FA;&#x56FE;&#x6162;&#x8981;&#x600E;&#x4E48;&#x4F18;&#x5316;&#xFF1F;<br>(1)mqtt &#x4E0A;&#x7EBF;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF1A;__IPC_APP_Get_Net_Status_cb &#x53EF;&#x4EE5;&#x4F7F;&#x7528; STAT_MQTT_ONLINE
 &#x5224;&#x5B9A; mqtt &#x662F;&#x5426;&#x4E0A;&#x7EBF;&#x6210;&#x529F;&#xFF0C;&#x6210;&#x529F;&#x540E;&#x53EF;&#x5F80;&#x4E0B;&#x6267;&#x884C;&#x5269;&#x4F59;&#x64CD;&#x4F5C;<br>(2)wifi &#x8FDE;&#x901A;&#x5916;&#x7F51;&#x540E;&#xFF0C;&#x53EF;&#x53E6;&#x8D77;&#x7EBF;&#x7A0B;&#xFF0C;&#x8FDB;&#x884C; P2P &#x521D;&#x59CB;&#x5316;&#xFF0C;&#x63D0;&#x9AD8;&#x8BBE;&#x5907;&#x63A5;&#x5165;&#x5916;&#x7F51;&#x6548;&#x7387;<br>(3)&#x5728;tuya_ipc_ring_buffer_init&#x4E2D;&#x5B9E;&#x73B0;&#x5F3A;&#x5236;&#x51FA;I&#x5E27;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;requestIframeCB  </p>
+<p>11&#x3001;&#x6784;&#x5EFA;&#x52A0;&#x5BC6;&#x901A;&#x9053;&#x5931;&#x8D25;&#x662F;&#x4EC0;&#x4E48;&#x539F;&#x56E0;&#x5BFC;&#x81F4;&#x7684;?<br>&#x63D0;&#x793A;&#x6784;&#x5EFA;&#x52A0;&#x5BC6;&#x901A;&#x9053;&#xFF0C;&#x53EF;&#x80FD;&#x662F;p2p&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x7F51;&#x7EDC;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x8D85;&#x8FC7;&#x6700;&#x5927;&#x540C;&#x65F6;&#x5728;&#x7EBF;&#x4EBA;&#x6570;&#x7B49;&#x539F;&#x56E0;&#xFF0C;&#x6839;&#x672C;&#x539F;&#x56E0;&#x662F;p2p&#x6CA1;&#x6709;&#x6253;&#x901A;&#xFF0C;&#x9700;&#x8981;&#x770B;&#x65E5;&#x5FD7;&#x5177;&#x4F53;&#x95EE;&#x9898;&#x9700;&#x8981;&#x5177;&#x4F53;&#x5206;&#x6790;  </p>
 
                                 
                                 </section>
@@ -906,7 +920,7 @@ ringbuffer &#x5373;&#x53EF;&#x3002;SDK &#x5E93;&#x6587;&#x4EF6;&#x5DF2;&#x5B9E;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"预览问题","level":"1.14.2","depth":2,"next":{"title":"本地录像问题","level":"1.14.3","depth":2,"path":"Chapter11/record.md","ref":"Chapter11/record.md","articles":[]},"previous":{"title":"配网问题","level":"1.14.1","depth":2,"path":"Chapter11/connectwifi.md","ref":"Chapter11/connectwifi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter11/preview.md","mtime":"2020-01-02T12:41:54.075Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-16T12:17:02.120Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"预览问题","level":"1.14.2","depth":2,"next":{"title":"本地录像问题","level":"1.14.3","depth":2,"path":"Chapter11/record.md","ref":"Chapter11/record.md","articles":[]},"previous":{"title":"配网问题","level":"1.14.1","depth":2,"path":"Chapter11/connectwifi.md","ref":"Chapter11/connectwifi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter11/preview.md","mtime":"2020-03-18T03:09:00.221Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-18T03:09:58.202Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
