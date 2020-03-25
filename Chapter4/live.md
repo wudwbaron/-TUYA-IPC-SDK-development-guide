@@ -32,7 +32,7 @@ requestIframeCB: call back function to request one I frame from video decoder. s
   max_buffer_seconds表示最大的视频缓存时间，换算成视频缓存空间大小是fps*max_buffer_seconds\*I帧的最大值（主码流300k，子码流200k），限制是这个参数的默认值为10s，最大值为10s，最小值为一个gop包含的时间(比如gop为20，fps为10,则这个最小值为gop/fps=2s)  
   requestIframeCB表示强制i帧的回调，需要用户主动实现这个回调，SDK会根据需要来调用，实现强制i帧可以优化出图时间  
 
-* 开启线程调用TUYA_APP_Put_Frame往视频通道塞原始的视频帧数据，编码器每编码一帧就往SDK送一帧,，主要调用tuya_ipc_ring_buffer_append_data往具体的某个通道塞流    
+* 开启线程调用TUYA_APP_Put_Frame往视频通道塞原始的视频帧数据，编码器每编码一帧就往SDK送一帧,，主要调用tuya_ipc_ring_buffer_append_data往具体的某个通道塞流，TUYA_APP_Put_Frame接口中的MEDIA_FRAME_S 这个结构体中包含timestamp和pts两个参数，实际开发者在TUYA_APP_Put_Frame传入的timestamp并没有传入tuya_ipc_ring_buffer_append_data这个接口，所以对于SDK来说timestamp参数是无效的，SDK内部会维护一个时间戳来进行音视频同步，实际传入的pts也没有用作音视频同步，但是音视频的pts是开发chromecast和echoshow重要参数，详情参考chromecast和echoshow开发章节。
 
 ```C
 /* append new frame into a ring buffer
