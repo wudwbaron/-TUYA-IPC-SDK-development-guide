@@ -27,7 +27,8 @@ OPERATE_RET tuya_ipc_door_bell_press(IN CONST DOORBELL_TYPE_E doorbell_type, IN 
 ![doorbell1](doorbell1.png)  
 (2)、一种是图文告警加带视频预览的门铃呼叫页面，选择app弹出的门铃呼叫中的接听直接在当前界面预览，优势是锁屏情况下无需输入密码进入设备，就可以实现预览对讲，实现方式如下：  
 ![doorbell2](doorbell2.png)  
-在按下设备门铃时，调用上面接口，DOORBELL_TYPE_E选择DOORBELL_AC，传入的图片需要有效且大小不超过100kB  
+在按下设备门铃时，调用上面接口，DOORBELL_TYPE_E选择DOORBELL_AC，传入的图片为NULL，大小为0 ，作用是唤起门铃呼叫界面，并且调用tuya_ipc_notify_with_event，传入的图片需要有效且大小不超过100kB作用是推送有人按门铃的图文消息  
+
 3、打开app上的推送通知权限，打开app自启动的权限  
 4、我们SDK的门铃呼叫接口内部封装了两个固定的dp点136和154，常用的排查方法是在iot平台的运营中查询设备日志，输入当前调试的设备id(app中设备信息里面虚拟id)，选择当前日期进行日志查询  
 ![iot查日志](motiondetect.assets/iot查日志.jpg)  

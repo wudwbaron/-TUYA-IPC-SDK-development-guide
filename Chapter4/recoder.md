@@ -52,7 +52,7 @@
     [03-11 10:58:25-- TUYA Debug][smart_frame.c:808] first serial number: 60686
     [03-11 10:58:25-- TUYA Debug][mqc_app.c:951] Send MQTT Msg.P:4 N:60686 Q:1
     [03-11 10:58:25-- TUYA Err][tuya_ipc_stream_storage.c:1518] storage not inited
-```  
+```
 *   调用 TUYA_APP_Init_Stream_Storage 函数进行本地存储初始化，默认开启连续存储，如需开
 启事件存储，注释 tuya_ipc_ss_set_write_mode(SS_WRITE_MODE_ALL)，开启 tuya_ipc_ss_ set_
 write_mode(SS_WRITE_MODE_EVENT)，如下图所示：  
@@ -87,3 +87,15 @@ OPERATE_RET TUYA_APP_Init_Stream_Storage(IN CONST CHAR_T *p_sd_base_path)
 * 对于sd卡的处理：本地存储仅支持 SD 卡使用 FAT32 格式，若检测到 SD 卡格式异常， 通过tuya_ipc_sd_get_status 函数中实现 SD 卡的检测，比如当检测到sd卡位exfat格式则返回SD_STATUS_ABNORMAL，当sd卡状态正常时则返回SD_STATUS_ABNORMAL，用户在 App 点击 SD 卡设置时，会有弹窗提醒SD 卡异常，引导客户对 SD 卡进行格式化，设备端实现相应的格式化接口IPC_APP_format_sd_card，对于sd卡的处理demo中大部分已经实现，开发时请参考demo根据实际需求进行更改  
 * 注意:sd卡这一块的处理逻辑比较多,请仔细理解并根据实际需求修改  
 * 至此本地录像功能开发完成  
+
+* FAQ：
+1、更新SDK后，增加对H265的支持后无法回放问题？  
+答：确认tuya_ipc_p2p_demo.c中的__TUYA_APP_ss_pb_get_video_cb函数中是否有__TUYA_APP_media_frame_TO_trans_video这个转换函数，确认源码如下：  
+```C
+STATIC VOID __TUYA_APP_ss_pb_get_video_cb(IN UINT_T pb_idx, IN CONST MEDIA_FRAME_S *p_frame)
+{
+    TRANSFER_VIDEO_FRAME_S video_frame = {0};
+    __TUYA_APP_media_frame_TO_trans_video(p_frame, &video_frame);
+    tuya_ipc_playback_send_video_frame(pb_idx, &video_frame);
+}
+```
